@@ -7,7 +7,7 @@
 
 <script>
 /*import HelloWorld from './components/HelloWorld.vue'*/
-import prova from './components/prova.vue'
+import prova from './components/codiceLista.vue'
 export default {
   name: 'App',
   components: {
