@@ -20,6 +20,6 @@
 <script>
 export default {
     name: 'codiceLista',
-    props: ['imglogo', 'titolo', 'imgtipo', 'imgpreferiti']
+    props: ['imglogo', 'titolo', 'imgtipo', 'imgpreferiti', 'descrizione', 'isBookmarked', 'tag', 'tipo', 'contenuto']
 }
 </script>
