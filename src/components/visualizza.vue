@@ -3,7 +3,7 @@
         <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container">
                 <a class="navbar-brand" href="listacodici.html">
-                    <img src="Risorse/Icone/back_arrow.svg" alt="indietro" width="24" height="24">
+                    <img src="assets/Icone/back_arrow.svg" alt="indietro" width="24" height="24">
                 </a>
                 <div class="container-fluid text-center">
                     <span class="navbar-brand mb-0 h1">Titolo codice</span>
@@ -20,9 +20,9 @@
         </div>
         <div class="container text-center my-5">
             <div class="row">
-              <div class="col order-last"><a href="#"><img class="img-thumbnail" src="Risorse/Icone/delete_icon.svg" alt="edi"></a></div>
-              <div class="col"><a href="dettagli.html"><img class="img-thumbnail" src="Risorse/Icone/edit_icon.svg" alt="edit"></a></div>
-              <div class="col order-first"><a href="#"><img class="img-thumbnail" src="Risorse/Icone/bookmark.svg" alt="edit"></a></div>
+              <div class="col order-last"><a href="#"><img class="img-thumbnail" src="assets/Icone/delete_icon.svg" alt="edi"></a></div>
+              <div class="col"><a href="dettagli.html"><img class="img-thumbnail" src="assets/Icone/edit_icon.svg" alt="edit"></a></div>
+              <div class="col order-first"><a href="#"><img class="img-thumbnail" src="Rassets/Icone/bookmark.svg" alt="edit"></a></div>
             </div>
           </div>
     </div>

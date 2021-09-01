@@ -10,7 +10,7 @@
     <div class="container py-3 my-2 text-center">
         <p>Inquadra il codice, <br>
         assicurati che ci siano condizioni di luce buone</p>
-        <img src="Risorse/Immagini/camera.jpg " style="max-width: 300px;">
+        <img src="assets/Icone/camera.jpg " style="max-width: 300px;">
         <div class="container my-2">
             <p>Scansione in corso...</p>
             <a href="listacodici.html"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></a>
