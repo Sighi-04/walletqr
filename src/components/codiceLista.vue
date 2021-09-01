@@ -2,17 +2,24 @@
      <a href="visualizza.html">
                 <div class="row pt-3">
                     <div class="col-2">
-                        <img src="assets/Icone/test_logo.svg" width="24px" height="24px">
+                        <img :src="imglogo" :alt="imglogo" width="24px" height="24px">
                     </div>
                     <div class="col-6">
-                        Titolo d'esempio
+                        {{titolo}}
                     </div>
                     <div class="col-2">
-                        <img src="assets/Icone/barcode.svg" width="24px" height="24px">
+                        <img :src="imgtipo" width="24px" height="24px">
                     </div>
                     <div class="col-2">
-                        <img src="assets/Icone/bookmark.svg" width="24px" height="24px">
+                        <img :src="imgpreferiti" width="24px" height="24px">
                     </div>
                 </div>
             </a>
 </template>
+
+<script>
+export default {
+    name: 'codiceLista',
+    props: ['imglogo', 'titolo', 'imgtipo', 'imgpreferiti', 'descrizione', 'isBookmarked', 'tag', 'tipo', 'contenuto']
+}
+</script>
