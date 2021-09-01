@@ -1,10 +1,11 @@
 {
-    "Titolo": null,
-    "Descrizione": null,
+    "imglogo": null, 
+    "titolo": null,
+    "imgtipo": null,
+    "imgpreferiti": null,
+    "descrizione": null,
     "isBookmarked": false,
-    "Tag": null,
-    "Tipoimg": null,
-    "Tipo": null,
-    "Contenuto": null
-
+    "tag": null,
+    "tipo": null,
+    "contenuto": null
 }
