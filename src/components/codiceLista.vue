@@ -1,5 +1,5 @@
 <template>
-     <a href="visualizza.html">
+     <router-link to="Scansione">
                 <div class="row pt-3">
                     <div class="col-2">
                         <img :src="imglogo" :alt="imglogo" width="24px" height="24px">
@@ -14,7 +14,7 @@
                         <img :src="imgpreferiti" width="24px" height="24px">
                     </div>
                 </div>
-            </a>
+     </router-link>
 </template>
 
 <script>
