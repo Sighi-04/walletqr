@@ -2,7 +2,7 @@
      <a href="visualizza.html">
                 <div class="row pt-3">
                     <div class="col-2">
-                        <img :src="imglogo" width="24px" height="24px">
+                        <img :src="imglogo" :alt="imglogo" width="24px" height="24px">
                     </div>
                     <div class="col-6">
                         {{titolo}}
