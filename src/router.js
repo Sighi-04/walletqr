@@ -1,18 +1,7 @@
-import Vue from "vue"
-import Router from "vue-router"
-import Scansione from "./components/scansione.vue"
-import Visualizza from "./components/visualizza.vue"
-Vue.use(Router)
+import Vue from "vue";
+import Router from "vue-router";
+
+Vue.use(Router);
 export default new Router({
-    routes:[
-        {
-            path:'/',
-            name:'scansione',
-            component: Scansione
-        },{
-            path:'/',
-            name:'visualizza',
-            component: Visualizza
-        }
-    ]
+
 })
