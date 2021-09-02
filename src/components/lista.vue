@@ -3,7 +3,7 @@
         <nav class="navbar navbar-light navbar-sticky sticky-top" style="background-color: #EA5D5D;">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">
-                <img src="#" alt="menuButton" width="32" height="32" class="d-inline-block align-text-top">
+                <img src="assets/Icone/bars_menu.svg" alt="menuButton" width="32" height="32" class="d-inline-block align-text-top">
                 Codici Salvati
               </a>
             </div>
