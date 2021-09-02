@@ -1,11 +1,11 @@
 <template>
 <div>
     <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="lista">
                     <img src="assets/Icone/back_arrow.svg" alt="indietro" width="24" height="24">
                 </a>
-                <div class="container-fluid text-center">
+                <div class="text-center">
                     <span class="navbar-brand mb-0 h1">Titolo codice</span>
                 </div>
             </div>
@@ -22,7 +22,7 @@
             <div class="row">
               <div class="col"><a href="#"><img class="img-thumbnail" src="assets/Icone/delete_icon.svg" alt="delete"></a></div>
               <div class="col"><a href="dettagli.html"><img class="img-thumbnail" src="assets/Icone/edit_icon.svg" alt="edit"></a></div>
-              <div class="col"><a href="#"><img class="img-thumbnail" src="Rassets/Icone/bookmark.svg" alt="bookmarks"></a></div>
+              <div class="col"><a href="#"><img class="img-thumbnail" src="assets/Icone/bookmark.svg" alt="bookmarks"></a></div>
             </div>
         </div>    
     </div>
