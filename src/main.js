@@ -1,11 +1,11 @@
 import Vue from 'vue'
-//import App from './App.vue'
-//import Scansione from './components/scansione.vue'
-import Lista from './components/lista.vue'
+import router from './router/'
+import App from "./App.vue"
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(Lista), //prima pagina
+  router,
+
+  //prima pagina
+  render: h => h(App)
 }).$mount('#app')
-
-
