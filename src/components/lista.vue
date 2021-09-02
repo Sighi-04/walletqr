@@ -22,11 +22,6 @@
 </template>
 
 <script>
-
-
-
-
-
 import codiceLista from './codiceLista.vue'
     export default {
     name: 'lista',
