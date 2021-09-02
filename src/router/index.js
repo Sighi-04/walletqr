@@ -3,6 +3,8 @@ import VueRouter from "vue-router";
 import lista from "../components/lista.vue";
 import scansione from "../components/scansione.vue";
 import visualizza from "../components/visualizza.vue";
+import dettagli from "../components/dettagli.vue";
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -24,7 +26,12 @@ const routes = [
   {
     path: "/visualizza",
     name: "visualizza",
-    component: visualizza
+    component: visualizza,
+  },
+  {
+    path:"/dettagli",
+    name:"dettagli",
+    component: dettagli,
   }
 ];
 
