@@ -4,7 +4,7 @@
             <div class="container-fluid">
               <li type="none">
                 <a class="navbar-brand" href="#">
-                  <img src="assets/Icone/bars_menu.svg" alt="menuButton" width="32" height="32" class="d-inline-block align-text-top">
+                  <img src="assets/Icone/bars_menu.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
                 </a>
               </li>
               <div class="text-center">

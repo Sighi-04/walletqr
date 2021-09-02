@@ -7,13 +7,16 @@
                 </div>
             </div>
         </nav>
-        <p>Inquadra il codice, <br>
-        assicurati che ci siano condizioni di luce buone</p>
-        <img src="assets/Immagini/camera.jpg " style="max-width: 300px;">
-        <div class="container my-2">
-            <p>Scansione in corso...</p>
-            <a href="lista"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></a>
+        <div class="my-4">        
+            <p>Inquadra il codice, <br>
+            assicurati che ci siano condizioni di luce buone</p>
+            <img src="assets/Immagini/camera.jpg " style="max-width: 300px;">
+            <div class="container my-2">
+                <p>Scansione in corso...</p>
+                <a href="lista"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></a>
+            </div>
         </div>
+
     </div>
 </template>
 
