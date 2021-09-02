@@ -1,5 +1,5 @@
 <template>
-    <div>        
+    <div class="text-center" >         
         <nav class="navbar navbar-light navbar-sticky sticky-top" style="background-color: #EA5D5D;">
             <div class="container text-center">
                 <div class="container-fluid">
@@ -9,7 +9,7 @@
         </nav>
         <p>Inquadra il codice, <br>
         assicurati che ci siano condizioni di luce buone</p>
-        <img src="assets/Icone/camera.jpg " style="max-width: 300px;">
+        <img src="assets/Immagini/camera.jpg " style="max-width: 300px;">
         <div class="container my-2">
             <p>Scansione in corso...</p>
             <a href="lista"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></a>
