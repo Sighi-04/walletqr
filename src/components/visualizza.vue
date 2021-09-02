@@ -2,7 +2,7 @@
         <div class="container my-2" style="font-family: Helvetica;">
         <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container">
-                <a class="navbar-brand" href="listacodici.html">
+                <a class="navbar-brand" href="lista">
                     <img src="assets/Icone/back_arrow.svg" alt="indietro" width="24" height="24">
                 </a>
                 <div class="container-fluid text-center">
@@ -27,3 +27,9 @@
           </div>
     </div>
 </template>
+
+<script>
+    export default {
+    name: 'visualizza',
+    }
+</script>

@@ -1,5 +1,5 @@
 <template>
-     <router-link to="Scansione">
+     <router-link to="visualizza">
                 <div class="row pt-3">
                     <div class="col-2">
                         <img :src="imglogo" :alt="imglogo" width="24px" height="24px">
