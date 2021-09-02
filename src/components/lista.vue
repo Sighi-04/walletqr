@@ -12,7 +12,8 @@
               </div>
             </div>
         </nav>
-        <codiceLista :titolo="titolo" :imglogo="imglogo" :imgtipo="imgtipo" :imgpreferiti="imgpreferiti"></codiceLista>
+        <div class="container"><codiceLista :titolo="titolo" :imglogo="imglogo" :imgtipo="imgtipo" :imgpreferiti="imgpreferiti"></codiceLista></div>
+
         <div class="position-fixed bottom-0 end-0">
           <a href="scansione">
             <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="lalalal">
