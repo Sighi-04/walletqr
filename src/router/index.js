@@ -14,6 +14,11 @@ const routes = [
     path: "/scansione",
     name: "scansione",
     component: scansione,
+  },
+  {
+    path: "/lista",
+    name: "lista",
+    component: lista,
   }
 ];
 
