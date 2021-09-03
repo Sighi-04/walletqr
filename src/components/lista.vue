@@ -1,10 +1,10 @@
 <template>
      <div>
         <nav class="navbar navbar-light navbar-sticky sticky-top" style="background-color: #EA5D5D;">
-            <div class="container-fluid">
+            <div class="container-fluid ">
               <li type="none">
                 <a class="navbar-brand" href="#">
-                  <img src="assets/Icone/bars_menu.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
+                  <img src="assets/Icone/bookmark.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
                 </a>
               </li>
               <div class="text-center">

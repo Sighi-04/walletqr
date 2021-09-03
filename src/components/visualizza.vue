@@ -2,8 +2,8 @@
 <div>
     <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
-                <router-link class="navbar-brand" to="lista">
-                    <img src="assets/Icone/back_arrow.svg" alt="indietro" width="24" height="24">
+                <router-link to="lista">
+                    <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
                 </router-link>
                 <div class="text-center">
                     <span class="navbar-brand mb-0 h1">{{titolo}}</span>
