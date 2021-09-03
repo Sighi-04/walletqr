@@ -2,7 +2,7 @@
 <div>
     <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
-                <router-link to="lista">
+                <router-link to="/">
                     <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
                 </router-link>
                 <div class="text-center">
@@ -50,7 +50,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
-                <router-link to="/lista">
+                <router-link to="/">
                     <button type="button" class="btn btn-danger btn-primary" data-bs-dismiss="modal">Elimina</button>
                 </router-link>
                 </div>

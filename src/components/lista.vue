@@ -2,9 +2,9 @@
      <div>
         <nav class="navbar navbar-light navbar-sticky sticky-top" style="background-color: #EA5D5D;">
             <div class="container-fluid ">
-              <li type="none">
+              <li type="none" id="clicca">
                 <a class="navbar-brand" href="#">
-                  <img src="assets/Icone/bookmark.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
+                  <img id="preferiti2" src="assets/Icone/bookmark.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
                 </a>
               </li>
               <div class="text-center">

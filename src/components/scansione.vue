@@ -16,7 +16,7 @@
             <div class="container my-2">
                 <p>Scansione in corso...</p>
                 <div id="reader" width="600px"></div>
-                <div class="mt-5"> <router-link to="lista"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></router-link></div>
+                <router-link to="/"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></router-link>
             </div>
         </div>
     </div>

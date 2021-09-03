@@ -21,12 +21,6 @@ const routes = [
     props: true
   },
   {
-    path: "/lista",
-    name: "lista",
-    component: lista,
-    props: true
-  },
-  {
     path: "/visualizza",
     name: "visualizza",
     component: visualizza,
