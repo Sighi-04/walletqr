@@ -6,7 +6,7 @@
                     <img src="assets/Icone/back_arrow.svg" alt="indietro" width="24" height="24">
                 </router-link>
                 <div class="text-center">
-                    <span class="navbar-brand mb-0 h1">Titolo codice</span>
+                    <span class="navbar-brand mb-0 h1">{{titolo}}</span>
                 </div>
             </div>
     </nav>
@@ -31,7 +31,8 @@
 
 <script>
     export default {
-    name: 'visualizza'
+    name: 'visualizza',
+    props: ["titolo", "descrizione", "contenuto", "isBookmarked"]
     }
 
 </script>
