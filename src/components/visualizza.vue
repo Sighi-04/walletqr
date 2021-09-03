@@ -20,13 +20,45 @@
         </div>
         <div class="container text-center my-5">
             <div class="row pt-5">
-              <div class="col"><a href="#"><img class="img-thumbnail" src="assets/Icone/delete_icon.svg" alt="delete"></a></div>
-              <div class="col"><router-link to="dettagli"><img class="img-thumbnail" src="assets/Icone/edit_icon.svg" alt="edit"></router-link></div>
-              <div class="col"><a href="#"><img class="img-thumbnail" src="assets/Icone/bookmark.svg" alt="bookmarks"></a></div>
+              <div class="col">
+                  <button type="button"  class="btn p-0" data-bs-toggle="modal" data-bs-target="#myModal" >
+                        <img class="img-thumbnail" width="40px" src="assets/Icone/delete_icon.svg">
+                  </button>
+             </div>
+              <div class="col">
+                  <router-link to="dettagli">
+                    <button type="button"  class="btn p-0">
+                        <img class="img-thumbnail" width="40px" src="assets/Icone/edit_icon.svg">
+                    </button>                      
+                  </router-link>
             </div>
-        </div>    
+            <div class="col">
+                    <button type="button"  class="btn p-0">
+                        <img class="img-thumbnail" width="40px" src="assets/Icone/bookmark.svg">
+                    </button>                   
+            </div>
+            </div>
+        </div> 
+         <div class="modal" id="myModal" tabindex="-1">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Sei sicuro?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Sei sicuro di voler eliminare il codice salvato?</p>
+                </div>
+                <div class="modal-footer">
+                <router-link to="/lista">
+                    <button type="button" class="btn btn-danger btn-primary" data-bs-dismiss="modal">Elimina</button>
+                </router-link>
+                </div>
+            </div>
+            </div>
+        </div>   
     </div>
-        
+
 </template>
 
 <script>
@@ -34,5 +66,13 @@
     name: 'visualizza',
     props: ["titolo", "descrizione", "contenuto", "isBookmarked"]
     }
-
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
 </script>
