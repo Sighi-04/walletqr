@@ -1,5 +1,6 @@
 //Funzione per leggere il contenuto di localStorage - 
 //Se non ci sono codici salvati restituisco null, altrimenti il json ottenuto dalla stringa localstorage
+/*
 function readLocalStorage () {
     let response = localStorage.getItem("Codici")
     if (!response) {
@@ -51,4 +52,22 @@ function modificaCodice(vecchio, nuovo) {
     let indice = indexOf(vecchio)
     currentStorage[indice]=nuovo
     localStorage.setItem("Codici", currentStorage)
+}
+
+*/
+
+var bottone=document.getElementById("bookmark");
+var preferiti=document.getElementById("preferiti");
+bottone.onclick=function(){
+    if(preferiti.getAttribute("src")=="assets/icone/bookmark.svg") {
+        //Aggiungere ai preferiti su localStorage
+        preferiti.setAttribute("src","assets/icone/bookmark_fill.svg")
+    }
+    else {
+        //Rimuovere dai preferiti su localStorage
+        preferiti.setAttribute("src", "assets/icone/bookmark.svg")
+    }
+
+
+
 }

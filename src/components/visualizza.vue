@@ -34,7 +34,7 @@
             </div>
             <div class="col">
                     <button  type="button" id="bookmark" class="btn p-0">
-                        <img class="img-thumbnail" width="40px" src="assets/Icone/bookmark.svg">
+                        <img id="preferiti" class="img-thumbnail" width="40px" src="assets/icone/bookmark.svg">
                     </button>                   
             </div>
             </div>
@@ -77,10 +77,8 @@
         contenuto: String
     }
     }
-     //       var preferiti=document.getElementById("bookmark");
-    //preferiti.onclick=function(){
-    //    preferiti.src="assets/Icone/bookmark_fill.svg"
-    //}
+
+
     // Get the modal
     var modal = document.getElementById("myModal");
 
