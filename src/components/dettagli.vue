@@ -2,7 +2,7 @@
     <div>            
         <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
-                <router-link to="/lista">
+                <router-link to="/">
                     <a class="navbar-brand">
                         <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
                     </a>                
