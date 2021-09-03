@@ -64,7 +64,17 @@
 <script>
     export default {
     name: 'visualizza',
-    props: ["titolo", "descrizione", "contenuto", "isBookmarked"]
+    props: {
+        imglogo: String,
+        titolo: String,
+        imgtipo: String,
+        imgpreferiti: String,
+        descrizione: String,
+        isBookmarked: Boolean,
+        tag: String,
+        tipo: String,
+        contenuto: String
+    }
     }
     // Get the modal
     var modal = document.getElementById("myModal");
