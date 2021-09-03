@@ -12,7 +12,7 @@
               </div>
             </div>
         </nav>
-        <div class="container"><codiceLista titolo="Titolo di prova" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg"></codiceLista></div>
+        <div class="container"><codiceLista titolo="Titolo di prova 1" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg"></codiceLista></div>
 
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">

@@ -12,7 +12,7 @@
     </nav>
         <div class="container my-4">
                 <figure class="figure">
-                    <figcaption class="figure-caption"><h3>Descrizione</h3><br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam doloremque necessitatibus consequuntur explicabo eaque, odit tenetur qui expedita ad sequi maxime, eius nulla enim. Officia pariatur ad magni minus non. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus excepturi ab vero consectetur? Atque iure, aliquam ullam quas consequuntur repudiandae ex minus, maiores culpa, officiis neque asperiores tempore saepe aut.</figcaption>
+                    <figcaption class="figure-caption"><h3>Descrizione</h3><br>{{descrizione}}</figcaption>
                   </figure>
                 <div class="text-center">
                     <img src="assets/icone/qrcode.svg" style="width: 250px;" class="rounded img-fluid img-thumbnail" alt="qrcode">
