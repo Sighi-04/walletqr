@@ -12,26 +12,31 @@ const routes = [
     path: "/",
     name: "lista",
     component: lista,
+    props: true
   },
   {
     path: "/scansione",
     name: "scansione",
     component: scansione,
+    props: true
   },
   {
     path: "/lista",
     name: "lista",
     component: lista,
+    props: true
   },
   {
     path: "/visualizza",
     name: "visualizza",
     component: visualizza,
+    props: true
   },
   {
     path:"/dettagli",
     name:"dettagli",
     component: dettagli,
+    props: true
   }
 ];
 
