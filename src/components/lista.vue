@@ -12,7 +12,7 @@
               </div>
             </div>
         </nav>
-        <div class="container"><codiceLista titolo="Titolo di prova 1" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg"></codiceLista></div>
+        <div class="container"><codiceLista titolo="prova" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg"></codiceLista></div>
 
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">
@@ -28,7 +28,59 @@ import codiceLista from './codiceLista.vue'
     name: 'lista',
     components: {
         codiceLista
-     },
+     }
+     /*
+     data(){
+       
+       let esempi = [
+         {
+            imglogo: "assets/icone/test_logo.svg",
+            titolo: "codice prova 1",
+            imgtipo: "assets/icone/barcode.svg",
+            imgpreferiti: "assets/icone/bookmark.svg",
+            descrizione: "descrizione codice prova 1",
+            isBookmarked: false,
+            tag: "tag prova",
+            tipo: "QR",
+            contenuto: "contenutopazzo"
+         },
+         {
+            imglogo: "assets/icone/test_logo.svg",
+            titolo: "codice prova 2",
+            imgtipo: "assets/icone/qrcode.svg",
+            imgpreferiti: "assets/icone/bookmark_fill.svg",
+            descrizione: "descrizione codice prova 2",
+            isBookmarked: true,
+            tag: "tag prova",
+            tipo: "QR",
+            contenuto: "contenutopazzo"
+         },
+         {
+            imglogo: "assets/icone/test_logo.svg",
+            titolo: "codice prova 3",
+            imgtipo: "assets/icone/barcode.svg",
+            imgpreferiti: "assets/icone/bookmark.svg",
+            descrizione: "descrizione codice prova 3",
+            isBookmarked: false,
+            tag: "tag prova",
+            tipo: "QR",
+            contenuto: "contenutopazzo"
+         },
+         {
+            imglogo: "assets/icone/test_logo.svg",
+            titolo: "codice prova 4",
+            imgtipo: "assets/icone/qrcode.svg",
+            imgpreferiti: "assets/icone/bookmark_fill.svg",
+            descrizione: "descrizione codice prova 4",
+            isBookmarked: true,
+            tag: "tag prova",
+            tipo: "QR",
+            contenuto: "contenutopazzo"
+         }
+       ]
+       let stringa = JSON.stringify(esempi)
+       localStorage.setItem("Codici", stringa)
+       */
   }
 </script>
 
