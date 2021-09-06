@@ -1,4 +1,4 @@
-//Funzione per leggere il contenuto di localStorage - 
+ //Funzione per leggere il contenuto di localStorage - 
 //Se non ci sono codici salvati restituisco null, altrimenti il json ottenuto dalla stringa localstorage
 
 export function readLocalStorage () {
@@ -54,33 +54,70 @@ export function modificaCodice(vecchio, nuovo) {
     localStorage.setItem("Codici", currentStorage)
 }
 /*
-
-var bottone=document.getElementById("bookmark");
-var preferiti=document.getElementById("preferiti");/
-bottone.onclick=function(){
-    if(preferiti.getAttribute("src")=="assets/icone/bookmark.svg") {
-        //Aggiungere ai preferiti su localStorage
-        preferiti.setAttribute("src","assets/icone/bookmark_fill.svg")
+export function switchPreferiti(titolo) {
+    let currentStorage = readLocalStorage();
+    let indice = currentStorage.findIndex(x => x.titolo===titolo)
+    if (currentStorage[indice].isBookmarked) {
+        currentStorage[indice].isBookmarked=false
+        currentStorage[indice].imgpreferiti="assets/Icone/bookmark.svg"
     }
     else {
-        //Rimuovere dai preferiti su localStorage
-        preferiti.setAttribute("src", "assets/icone/bookmark.svg")
+        currentStorage[indice].isBookmarked=true
+        currentStorage[indice].imgpreferiti="assets/Icone/bookmark_fill.svg"
     }
-
-
+    localStorage.setItem("Codici", JSON.stringify(localStorage))
 }
+*/
 
-/*var clicca=document.getElementById("clicca");
-var preferiti2=document.getElementById("preferiti2");
-clicca.onclick=function(){
-    if(preferiti2.getAttribute("src")=="assets/icone/bookmark.svg") {
-        preferiti2.setAttribute("src","assets/icone/bookmark_fill.svg")
-        caricabookmark();
+//dati di prova
+/*
+let provaa = [
+    {
+        "imglogo": "assets/Icone/test_logo.svg", 
+        "titolo": "titolo prova 1",
+        "imgtipo": "assets/icone/qrcode.svg",
+        "imgpreferiti": "assets/icone/bookmark_fill.svg",
+        "descrizione": "descrizione codice 1",
+        "isBookmarked": true,
+        "tag": null,
+        "tipo": "QR",
+        "contenuto": "contenuto di prova 1"
+    },
+    {
+        "imglogo": "assets/Icone/test_logo.svg", 
+        "titolo": "titolo prova 2",
+        "imgtipo": "assets/icone/qrcode.svg",
+        "imgpreferiti": "assets/icone/bookmark.svg",
+        "descrizione": "descrizione codice 2",
+        "isBookmarked": false,
+        "tag": null,
+        "tipo": "QR",
+        "contenuto": "contenuto di prova 2"
+    },
+    {
+        "imglogo": "assets/Icone/test_logo.svg", 
+        "titolo": "titolo prova 3",
+        "imgtipo": "assets/icone/barcode.svg",
+        "imgpreferiti": "assets/icone/bookmark_fill.svg",
+        "descrizione": "descrizione codice 3",
+        "isBookmarked": true,
+        "tag": null,
+        "tipo": "QR",
+        "contenuto": "contenuto di prova 3"
+    },
+    {
+        "imglogo": "assets/Icone/test_logo.svg", 
+        "titolo": "titolo prova 4",
+        "imgtipo": "assets/icone/barcode.svg",
+        "imgpreferiti": "assets/icone/bookmark.svg",
+        "descrizione": "descrizione codice 4",
+        "isBookmarked": false,
+        "tag": null,
+        "tipo": "QR",
+        "contenuto": "contenuto di prova 4"
     }
-    else {
-        preferiti2.setAttribute("src", "assets/icone/bookmark.svg")
-    }
+]
 
-}
+localStorage.setItem("Codici", JSON.stringify(provaa))
 
 */

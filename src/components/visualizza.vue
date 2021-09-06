@@ -34,7 +34,7 @@
             </div>
             <div class="col">
                     <button  type="button" id="bookmark" class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded">
-                        <img id="preferiti" class="img-thumbnail" width="40px" :src="imgpreferiti">
+                        <img id="preferiti" class="img-thumbnail" width="40px" :src="imgpreferiti" @click="clickPreferiti">
                     </button>                   
             </div>
             </div>
@@ -46,7 +46,7 @@
                 <h5 class="modal-title">Sei sicuro?</h5>
                 </div>
                 <div class="modal-body">
-                <p>Sei sicuro di voler eliminare il codice salvato?</p>
+                <p>Sei sicuro di voler eliminare il codice <b>{{titolo}}</b>?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-
+    import { switchPreferiti } from '../../public/localStorage.js'
     export default {
     name: 'visualizza',
     props: {
@@ -75,7 +75,12 @@
         tag: String,
         tipo: String,
         contenuto: String
-    }
+    },
+    methods: {
+        clickPreferiti() {
+            switchPreferiti(this.titolo)
+        }
+     }
     }
 
 

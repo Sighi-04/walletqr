@@ -9,7 +9,6 @@
         </nav>
         <div class="my-4">        
             <div class="container my-2">
-                <p>Scansione in corso...</p>
                 <StreamBarcodeReader class="pt-5 pb-5-5 mb-3 mt-5"
                     @decode="onDecode">
                 </StreamBarcodeReader>
