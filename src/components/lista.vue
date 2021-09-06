@@ -16,23 +16,24 @@
               <div class="accordion shadow p-3 mb-5 bg-body rounded" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">A cosa serve quest'app? #0</button>
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ><p>#0 "A <strong>cosa serve </strong>quest'app?"</p> </button>
                   </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Questa app serve per </div>
+                  <div class="accordion-body">Questa app è un portafoglio di di codici!<br> Attraverso la scannerizzazione dei codici all'interno di quest'app, l'algoritmo potrà memorizzare e ricreare quando più ne hai bisogno il codice che ti serve senza che l'immagine possa dare probllemi di risoluzione , dovuti per esempio alla fotocamera o alla qualità dell'immagine</div>
                 </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Come si aggiungono i codici #1</button>
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"><p class="
+                py-0">#1 "Come si <strong>aggiungono</strong> i codici?"</p> </button>
               </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">aaaaaaaa</div>
+            <div class="accordion-body"></div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Come si modificano i codici #2</button>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><p>#2 "Come si <strong>modificano</strong> i codici?" </p></button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">aaaa</div>
@@ -40,7 +41,7 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Come si cancellano i codici #3</button>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><p>#3 "Come si <strong class="p-0">eliminano</strong> i codici?"</p></button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">aaaaaa</div>
