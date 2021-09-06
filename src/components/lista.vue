@@ -12,7 +12,7 @@
               </div>
             </div>
         </nav>
-        <div class="container"><codiceLista :v-for="codice in codici" :titolo="codice.titolo" :imglogo="codice.imglogo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti"></codiceLista></div>
+        <div class="container"><codiceLista v-for="(codice, index) in codici" :key="index" :imglogo="codice.imglogo" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">
             <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="lalalal">
@@ -24,17 +24,25 @@
 <script>
 import codiceLista from './codiceLista.vue'
 import { readLocalStorage } from '../../public/localStorage.js'
-    export default {
-    name: 'lista',
-    components: {
-        codiceLista
-     },
-     data(){
-        let salvati = readLocalStorage()
-        return {
-          codici: salvati
-        }
-     }
+export default {
+name: 'lista',
+components: {
+    codiceLista
+ },
+ data(){
+    return {
+      codici: [] // or {} depending of your data type
+    }
+ },
+ methods: {
+   async loadData() {
+     let salvati = await readLocalStorage()
+     if (salvati) this.codici = salvati
+   }
+ },
+ mounted() {
+   this.loadData()
+ }
      /*
      data(){
        

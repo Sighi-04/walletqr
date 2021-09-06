@@ -1,5 +1,5 @@
 <template>
-     <router-link :to="{ name: 'visualizza', params: { titolo: titolo, descrizione: 'Descrizione per testare il passaggio di informazioni tra componenti', imgpreferiti: 'assets/Icone/bookmark.svg' }}">
+     <router-link :to="{ name: 'visualizza', params: { titolo: titolo, descrizione: descrizione, imgpreferiti: imgpreferiti }}">
                 <div class="row pt-3">
                     <div class="col-2">
                         <img :src="imglogo" :alt="imglogo" width="24px" height="24px">
