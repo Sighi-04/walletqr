@@ -34,7 +34,7 @@
             </div>
             <div class="col">
                     <button  type="button" id="bookmark" class="btn p-0">
-                        <img id="preferiti" class="img-thumbnail" width="40px" src="assets/Icone/bookmark.svg">
+                        <img id="preferiti" class="img-thumbnail" width="40px" src="assets/icone/bookmark.svg">
                     </button>                   
             </div>
             </div>

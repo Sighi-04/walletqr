@@ -71,11 +71,12 @@ bottone.onclick=function(){
 
 }
 
-var clicca=document.getElementById("clicca");
+/*var clicca=document.getElementById("clicca");
 var preferiti2=document.getElementById("preferiti2");
 clicca.onclick=function(){
     if(preferiti2.getAttribute("src")=="assets/icone/bookmark.svg") {
         preferiti2.setAttribute("src","assets/icone/bookmark_fill.svg")
+        caricabookmark();
     }
     else {
         preferiti2.setAttribute("src", "assets/icone/bookmark.svg")
@@ -83,3 +84,13 @@ clicca.onclick=function(){
 
 }
 
+function caricabookmark(){
+    //ciclo for , index 0 , ripetizione n volte quanto il numero di oggetti
+    //se è bookmarked, mettilo nella pagina
+    for (let x=0,x<lista.length,x++){
+        if (lista[x].bookmarked==true){
+            //aggiunta degli elementi
+            document.appendChild(//'template');
+        }
+    }
+}*/

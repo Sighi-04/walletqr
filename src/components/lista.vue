@@ -82,5 +82,6 @@ import codiceLista from './codiceLista.vue'
        localStorage.setItem("Codici", stringa)
        */
   }
+  
 </script>
 
