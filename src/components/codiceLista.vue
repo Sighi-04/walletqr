@@ -14,7 +14,9 @@
                         <img :src="imgpreferiti" width="24px" height="24px">
                     </div>
                 </div>
+        <hr>
      </router-link>
+     
 </template>
 
 <script>

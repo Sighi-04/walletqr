@@ -31,6 +31,7 @@ import { StreamBarcodeReader } from "vue-barcode-reader";
         methods: {
             onDecode (result) {
             console.log(result)
+            
         }
 }
     }

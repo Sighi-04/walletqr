@@ -12,9 +12,9 @@
     </nav>
         <div class="container my-4">
                 <figure class="figure">
-                    <figcaption class="figure-caption"><h3>Descrizione</h3><br>{{descrizione}}</figcaption>
+                    <figcaption class="figure-caption"><h3>Descrizione</h3><br><br>{{descrizione}}</figcaption>
                   </figure>
-                <div class="text-center">
+                <div class="container my-5 text-center">
                     <img src="assets/icone/qrcode.svg" style="width: 250px;" class="rounded img-fluid img-thumbnail" alt="qrcode">
                 </div>
         </div>
@@ -34,7 +34,7 @@
             </div>
             <div class="col">
                     <button  type="button" id="bookmark" class="btn p-0">
-                        <img id="preferiti" class="img-thumbnail" width="40px" src="assets/icone/bookmark.svg">
+                        <img id="preferiti" class="img-thumbnail" width="40px" src="assets/icone/bookmark_add_black_24dp.svg">
                     </button>                   
             </div>
             </div>
