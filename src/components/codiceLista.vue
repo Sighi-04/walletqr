@@ -1,6 +1,6 @@
 <template>
-     <router-link :to="{ name: 'visualizza', params: { titolo: titolo, descrizione: descrizione, imgpreferiti: imgpreferiti }}">
-                <div class="row pt-3">
+     <router-link style="text-decoration:none;color:black;" :to="{ name: 'visualizza', params: { titolo: titolo, descrizione: descrizione, imgpreferiti: imgpreferiti }}">
+                <div class="row py-3">
                     <div class="col-2">
                         <img :src="imglogo" :alt="imglogo" width="24px" height="24px">
                     </div>
@@ -14,7 +14,7 @@
                         <img :src="imgpreferiti" width="24px" height="24px">
                     </div>
                 </div>
-        <hr>
+        <hr class="my-0">
      </router-link>
      
 </template>

@@ -19,7 +19,7 @@
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">A cosa serve quest'app? #0</button>
                   </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Questa app serve per</div>
+                  <div class="accordion-body">Questa app serve per </div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -47,8 +47,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="dropdown mt-3">
     </div>
   </div>
   </div>
