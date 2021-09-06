@@ -12,7 +12,7 @@
               </div>
             </div>
         </nav>
-        <div class="container"><codiceLista titolo="prova" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg"></codiceLista></div>
+        <div class="container"><codiceLista :v-for="codice in codici" :titolo="codice.titolo" :imglogo="codice.imglogo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti"></codiceLista></div>
 
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">
@@ -24,10 +24,17 @@
 
 <script>
 import codiceLista from './codiceLista.vue'
+import { readLocalStorage } from '../../public/localStorage.js'
     export default {
     name: 'lista',
     components: {
         codiceLista
+     },
+     data(){
+        let salvati = readLocalStorage()
+        return {
+          codici: salvati
+        }
      }
      /*
      data(){

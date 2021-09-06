@@ -1,7 +1,7 @@
 //Funzione per leggere il contenuto di localStorage - 
 //Se non ci sono codici salvati restituisco null, altrimenti il json ottenuto dalla stringa localstorage
-/*
-function readLocalStorage () {
+
+export function readLocalStorage () {
     let response = localStorage.getItem("Codici")
     if (!response) {
          return null
@@ -13,7 +13,7 @@ function readLocalStorage () {
 }
 
 //Funzione per aggiungere un codice a localStorage
-function addToLocalStorage (elemento) {
+export function addToLocalStorage (elemento) {
     //ottengo i contenuti attuali
     let currentStorage = readLocalStorage()
     //aggiungo l'elemento ricevuto come parametro
@@ -23,16 +23,16 @@ function addToLocalStorage (elemento) {
 }
 
 //Funzione per rimuovere un elemento da localStorage, dato il suo indice
-function removeFromLocalStorage(elemento) {
+export function removeFromLocalStorage(elemento) {
     //ottengo i contenuti correnti
     let currentStorage = readLocalStorage()
     //rimuovo l'elemento con il metodo splice, dopo aver trovato il suo indice con indexOf
-    currentStorage.splice(currentStorage.indexOf(elemento),1)
+    currentStorage.splice(currentStorage.indexOf(elemento),1);
 
 }
 
 //Funzione per ordinare i codici, mettendo prima quelli preferiti
-function ordinaCodici(json_base){
+export function ordinaCodici(json_base){
     let preferiti = []
     let normali = []
     json_base.forEach(codice => {
@@ -47,17 +47,16 @@ function ordinaCodici(json_base){
 }
 
 //Funzione per modificare un elemento esistente
-function modificaCodice(vecchio, nuovo) {
-    let currentStorage = readLocalStorage()
-    let indice = indexOf(vecchio)
+export function modificaCodice(vecchio, nuovo) {
+    let currentStorage = readLocalStorage();
+    let indice = currentStorage.indexOf(vecchio);
     currentStorage[indice]=nuovo
     localStorage.setItem("Codici", currentStorage)
 }
-
-*/
+/*
 
 var bottone=document.getElementById("bookmark");
-var preferiti=document.getElementById("preferiti");
+var preferiti=document.getElementById("preferiti");/
 bottone.onclick=function(){
     if(preferiti.getAttribute("src")=="assets/icone/bookmark.svg") {
         //Aggiungere ai preferiti su localStorage
@@ -83,3 +82,4 @@ clicca.onclick=function(){
 
 }
 
+*/
