@@ -26,11 +26,7 @@
               </div>
             </div>
         </nav>
-        <div class="container my-2">
-          <codiceLista titolo="prova" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg">
-          </codiceLista>
-        </div>
-
+        <div class="container"><codiceLista v-for="(codice, index) in codici" :key="index" :imglogo="codice.imglogo" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">
             <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="aggiungi">
@@ -41,67 +37,21 @@
 
 <script>
 import codiceLista from './codiceLista.vue'
-    export default {
-    name: 'lista',
-    components: {
-        codiceLista
-     }
-     /*
-     data(){
-       
-       let esempi = [
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 1",
-            imgtipo: "assets/icone/barcode.svg",
-            imgpreferiti: "assets/icone/bookmark.svg",
-            descrizione: "descrizione codice prova 1",
-            isBookmarked: false,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         },
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 2",
-            imgtipo: "assets/icone/qrcode.svg",
-            imgpreferiti: "assets/icone/bookmark_fill.svg",
-            descrizione: "descrizione codice prova 2",
-            isBookmarked: true,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         },
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 3",
-            imgtipo: "assets/icone/barcode.svg",
-            imgpreferiti: "assets/icone/bookmark.svg",
-            descrizione: "descrizione codice prova 3",
-            isBookmarked: false,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         },
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 4",
-            imgtipo: "assets/icone/qrcode.svg",
-            imgpreferiti: "assets/icone/bookmark_fill.svg",
-            descrizione: "descrizione codice prova 4",
-            isBookmarked: true,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         }
-       ]
-       let stringa = JSON.stringify(esempi)
-       localStorage.setItem("Codici", stringa)
-       */
-  }
-  
+import { readLocalStorage } from '../../public/localStorage.js'
+export default {
+name: 'lista',
+components: {
+    codiceLista
+ },
+ data(){
+    let salvati = readLocalStorage();
+    return {
+      codici: salvati
+    }
+ }
+}
 </script>
-
+/*
 <!--<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
   
 </button>
