@@ -44,75 +44,14 @@ components: {
     codiceLista
  },
  data(){
+    let salvati = readLocalStorage();
     return {
-      codici: [] // or {} depending of your data type
+      codici: salvati
     }
- },
- methods: {
-   async loadData() {
-     let salvati = await readLocalStorage()
-     if (salvati) this.codici = salvati
-   }
- },
- mounted() {
-   this.loadData()
  }
-     /*
-     data(){
-       
-       let esempi = [
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 1",
-            imgtipo: "assets/icone/barcode.svg",
-            imgpreferiti: "assets/icone/bookmark.svg",
-            descrizione: "descrizione codice prova 1",
-            isBookmarked: false,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         },
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 2",
-            imgtipo: "assets/icone/qrcode.svg",
-            imgpreferiti: "assets/icone/bookmark_fill.svg",
-            descrizione: "descrizione codice prova 2",
-            isBookmarked: true,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         },
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 3",
-            imgtipo: "assets/icone/barcode.svg",
-            imgpreferiti: "assets/icone/bookmark.svg",
-            descrizione: "descrizione codice prova 3",
-            isBookmarked: false,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         },
-         {
-            imglogo: "assets/icone/test_logo.svg",
-            titolo: "codice prova 4",
-            imgtipo: "assets/icone/qrcode.svg",
-            imgpreferiti: "assets/icone/bookmark_fill.svg",
-            descrizione: "descrizione codice prova 4",
-            isBookmarked: true,
-            tag: "tag prova",
-            tipo: "QR",
-            contenuto: "contenutopazzo"
-         }
-       ]
-       let stringa = JSON.stringify(esempi)
-       localStorage.setItem("Codici", stringa)
-       */
-  }
-  
+}
 </script>
-
+/*
 <!--<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
   
 </button>
