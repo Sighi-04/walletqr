@@ -15,25 +15,25 @@
                     <figcaption class="figure-caption"><h3>Descrizione</h3><br><br>{{descrizione}}</figcaption>
                   </figure>
                 <div class="container my-5 text-center">
-                    <img src="assets/icone/qrcode.svg" style="width: 250px;" class="rounded img-fluid img-thumbnail" alt="qrcode">
+                    <img src="assets/icone/qrcode.svg" style="width: 250px;" class="rounded img-fluid img-thumbnail shadow p-3 mb-5 bg-body rounded" alt="qrcode">
                 </div>
         </div>
         <div class="container text-center my-5">
             <div class="row pt-5">
               <div class="col">
-                  <button type="button"  class="btn p-0" data-bs-toggle="modal" data-bs-target="#myModal" >
+                  <button type="button"  class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded" data-bs-toggle="modal" data-bs-target="#myModal" >
                         <img class="img-thumbnail" width="40px" src="assets/Icone/delete_icon.svg">
                   </button>
              </div>
               <div class="col">
                   <router-link to="dettagli">
-                    <button type="button"  class="btn p-0">
+                    <button type="button"  class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded">
                         <img class="img-thumbnail" width="40px" src="assets/Icone/edit_icon.svg">
                     </button>                      
                   </router-link>
             </div>
             <div class="col">
-                    <button  type="button" id="bookmark" class="btn p-0">
+                    <button  type="button" id="bookmark" class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded">
                         <img id="preferiti" class="img-thumbnail" width="40px" src="assets/icone/bookmark.svg">
                     </button>                   
             </div>
