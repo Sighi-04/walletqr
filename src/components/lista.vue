@@ -13,7 +13,6 @@
             </div>
         </nav>
         <div class="container"><codiceLista :v-for="codice in codici" :titolo="codice.titolo" :imglogo="codice.imglogo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti"></codiceLista></div>
-
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">
             <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="lalalal">
