@@ -4,7 +4,7 @@
             <div class="container-fluid ">
               <li type="none" id="clicca">
                 <a class="navbar-brand" href="#">
-                  <img id="preferiti2" src="src/assets/Icone/bookmarks_black_24dp.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
+                  <img id="preferiti2" src="assets/Icone/bookmarks_black_24dp.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
                 </a>
               </li>
               <div class="text-center">

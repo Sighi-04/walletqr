@@ -27,7 +27,7 @@
             <router-link to="/scansione"><img class="img-thumbnail" src="assets/Icone/qrcode.svg" width="250px" height="250px"></router-link>
             <p class="mt-5">Il codice è stato salvato, premi questa icona per scansionarlo nuovamente</p>
             <div class="container mt-3 pt-3">
-                <div class="container m-1"><router-link to="/visualizza"><button type="button" class="btn btn-success btn-lg">Conferma</button></router-link></div>            
+                <div class="container m-1"><router-link to="/visualizza"><button type="button" style="width:70%" class="btn btn-success btn-lg">Conferma</button></router-link></div>            
             </div>
         </div>
     </div>
