@@ -4,7 +4,7 @@
             <div class="container-fluid ">
               <li type="none" id="clicca">
                 <a class="navbar-brand" href="#">
-                  <img id="preferiti2" src="assets/Icone/bookmark.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
+                  <img id="preferiti2" src="src/assets/Icone/bookmarks_black_24dp.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top">
                 </a>
               </li>
               <div class="text-center">
@@ -12,7 +12,11 @@
               </div>
             </div>
         </nav>
-        <div class="container"><codiceLista :v-for="codice in codici" :titolo="codice.titolo" :imglogo="codice.imglogo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti"></codiceLista></div>
+        <div class="container my-2">
+          <codiceLista titolo="prova" imglogo="assets/icone/test_logo.svg" imgtipo="assets/icone/barcode.svg" imgpreferiti="assets/icone/bookmark.svg">
+          </codiceLista>
+        </div>
+
         <div class="position-fixed bottom-0 end-0">
           <router-link to="scansione">
             <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="lalalal">
@@ -23,17 +27,10 @@
 
 <script>
 import codiceLista from './codiceLista.vue'
-import { readLocalStorage } from '../../public/localStorage.js'
     export default {
     name: 'lista',
     components: {
         codiceLista
-     },
-     data(){
-        let salvati = readLocalStorage()
-        return {
-          codici: salvati
-        }
      }
      /*
      data(){
