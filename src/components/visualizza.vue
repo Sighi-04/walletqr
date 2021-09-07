@@ -78,11 +78,11 @@
     },
     methods: {
         clickPreferiti() {
+            console.log(this.titolo)
             switchPreferiti(this.titolo)
         }
      }
     }
-
 
     // Get the modal
     var modal = document.getElementById("myModal");

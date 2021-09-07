@@ -3,7 +3,7 @@
 
 export function readLocalStorage () {
     let response = localStorage.getItem("Codici")
-    if (!response) {
+    if (!response || response=="[]") {
          return null
     }
     else {
@@ -52,6 +52,25 @@ export function modificaCodice(vecchio, nuovo) {
     let indice = currentStorage.indexOf(vecchio);
     currentStorage[indice]=nuovo
     localStorage.setItem("Codici", currentStorage)
+}
+
+export function switchPreferiti(titolo) {
+    let currentStorage = readLocalStorage()
+    let iconapreferiti = document.getElementById("preferiti")
+    console.log(readLocalStorage())
+    let indice = currentStorage.findIndex(x => x.titolo===titolo)
+    console.log(currentStorage[indice])
+    if(currentStorage[indice].isBookmarked) {
+        currentStorage[indice].isBookmarked=false;
+        currentStorage[indice].imgpreferiti = "assets/icone/bookmark.svg"
+        iconapreferiti.setAttribute("src", currentStorage[indice].imgpreferiti)
+    }
+    else {
+        currentStorage[indice].isBookmarked=true;
+        currentStorage[indice].imgpreferiti = "assets/icone/bookmark_fill.svg"
+        iconapreferiti.setAttribute("src", currentStorage[indice].imgpreferiti)
+    }
+    localStorage.setItem("Codici", JSON.stringify(currentStorage))
 }
 /*
 export function switchPreferiti(titolo) {
