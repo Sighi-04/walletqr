@@ -74,21 +74,6 @@ export function switchPreferiti(titolo) {
     }
     localStorage.setItem("Codici", JSON.stringify(currentStorage))
 }
-/*
-export function switchPreferiti(titolo) {
-    let currentStorage = readLocalStorage();
-    let indice = currentStorage.findIndex(x => x.titolo===titolo)
-    if (currentStorage[indice].isBookmarked) {
-        currentStorage[indice].isBookmarked=false
-        currentStorage[indice].imgpreferiti="assets/Icone/bookmark.svg"
-    }
-    else {
-        currentStorage[indice].isBookmarked=true
-        currentStorage[indice].imgpreferiti="assets/Icone/bookmark_fill.svg"
-    }
-    localStorage.setItem("Codici", JSON.stringify(localStorage))
-}
-*/
 
 //dati di prova
 /*
