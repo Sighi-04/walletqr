@@ -14,10 +14,6 @@
                 </StreamBarcodeReader>
             </div>
             <div class="container">
-            <!--<div class=" container alert alert-warning" role="alert">
-                Inquadra il codice, <br>
-                assicurati che ci siano condizioni di luce buone
-            </div>-->
             <div class="alert alert-info my-3" role="alert">
                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                 <div>
@@ -43,7 +39,7 @@ import { StreamBarcodeReader } from "vue-barcode-reader";
         },
         methods: {
             onDecode (result) {
-            console.log(result)
+                console.log(result)
             
         }
 }

@@ -64,7 +64,20 @@
             </div>
           </div>
         </nav>
-        <div class="container"><codiceLista v-for="(codice, index) in codici" :key="index" :imglogo="codice.imglogo" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
+        <div class="container">
+          <div v-if="codici==null">
+            <div class="container my-5">
+              <div class="text-center">
+                <figure class="figure">
+                  <img src="Assets/Icone/empty.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
+                    <figcaption class="figure-caption">Non ci sono codici salvati,<br>
+                      premi "+" per aggiungerne uno</figcaption>
+                    </figure>
+               </div>
+              </div>
+            </div>
+          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" :imglogo="codice.imglogo" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
+        </div>
         <div class="position-fixed bottom-0 end-0">
         <router-link to="scansione">
           <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="aggiungi">
