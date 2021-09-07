@@ -23,11 +23,13 @@ export function addToLocalStorage (elemento) {
 }
 
 //Funzione per rimuovere un elemento da localStorage, dato il suo indice
-export function removeFromLocalStorage(elemento) {
+export function removeFromLocalStorage(titolo) {
     //ottengo i contenuti correnti
     let currentStorage = readLocalStorage()
     //rimuovo l'elemento con il metodo splice, dopo aver trovato il suo indice con indexOf
-    currentStorage.splice(currentStorage.indexOf(elemento),1);
+    let indice = currentStorage.findIndex(x => x.titolo===titolo)
+    currentStorage.splice(indice,1);
+    localStorage.setItem("Codici", JSON.stringify(currentStorage))
 
 }
 

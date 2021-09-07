@@ -51,7 +51,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
                 <router-link to="/">
-                    <button type="button" class="btn btn-danger btn-primary" data-bs-dismiss="modal">Elimina</button>
+                    <button type="button" class="btn btn-danger btn-primary" data-bs-dismiss="modal" @click="elimina">Elimina</button>
                 </router-link>
                 </div>
             </div>
@@ -62,7 +62,7 @@
 </template>
 
 <script>
-    import { switchPreferiti } from '../../public/localStorage.js'
+    import { switchPreferiti, removeFromLocalStorage } from '../../public/localStorage.js'
     export default {
     name: 'visualizza',
     props: {
@@ -80,6 +80,9 @@
         clickPreferiti() {
             console.log(this.titolo)
             switchPreferiti(this.titolo)
+        },
+        elimina(){
+            removeFromLocalStorage(this.titolo)
         }
      }
     }
