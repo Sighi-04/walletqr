@@ -79,7 +79,7 @@
           <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" :imglogo="codice.imglogo" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         </div>
         <div class="position-fixed bottom-0 end-0">
-        <router-link to="scansione">
+        <router-link :to="{name: 'scansione', params: {caller: 'lista'}}">
           <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="aggiungi">
         </router-link>
       </div>
@@ -87,18 +87,18 @@
   </template>
 
 <script>
-import codiceLista from './codiceLista.vue'
-import { readLocalStorage } from '../../public/localStorage.js'
-export default {
-name: 'lista',
-components: {
-    codiceLista
- },
- data(){
-    let salvati = readLocalStorage();
-    return {
-      codici: salvati
-    }
- }
-}
+  import codiceLista from './codiceLista.vue'
+  import { readLocalStorage } from '../../public/localStorage.js'
+  export default {
+  name: 'lista',
+  components: {
+      codiceLista
+  },
+  data(){
+      let salvati = readLocalStorage();
+      return {
+        codici: salvati
+      }
+  }
+  }
 </script>

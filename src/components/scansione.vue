@@ -21,7 +21,7 @@
                 </div>
             </div>
                 <div class="my-4" id="reader" width="600px"></div>
-                <router-link to="/"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></router-link>
+                <router-link :to="{name: caller}"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></router-link>
                 </div>
         </div>
         <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
@@ -50,13 +50,11 @@ export default {
     methods: {
         onDecode (result) {
                 VueRouter.push({name: 'dettagli', params: {contenuto: result}});
-                 //permette lo spostamento quando il codice viene scannerizzati
+                    //permette lo spostamento quando il codice viene scannerizzati
             }   
-
-            }
+     },
+     props: {
+        caller: String
     }
+}
 </script>
-
-<style scoped>
-
-</style>
