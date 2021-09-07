@@ -32,17 +32,28 @@
 </template>
 
 <script>
-import { StreamBarcodeReader } from "vue-barcode-reader";
-    export default {
-        components: {
-            StreamBarcodeReader
-        },
-        methods: {
-            onDecode (result) {
-                console.log(result)
-            
+import { readLocalStorage } from '../../public/localStorage.js'
+import VueRouter from '../router/index.js'
+import { StreamBarcodeReader } from "vue-barcode-reader"
+export default {
+    name: 'scansione',
+    components: {
+        StreamBarcodeReader
+    },
+    data(){
+        let salvati = readLocalStorage();
+        return {
+        codici: salvati,
+        
         }
-}
+    },
+    methods: {
+        onDecode (result) {
+                VueRouter.push({name: 'dettagli', params: {contenuto: result}});
+                 //permette lo spostamento quando il codice viene scannerizzati
+            }   
+
+            }
     }
 </script>
 
