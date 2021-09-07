@@ -28,23 +28,30 @@
                 py-0">#1 "Come si <strong>aggiungono</strong> i codici?"</p> </button>
               </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body"></div>
+            <div class="accordion-body">Nella schermata principale, clicca il pulsante "+" in basso a destra. Dopo aver scansionato, aggiungi il nome e una descrizione. Finito il procedimento , tornerai alla schermata principale , dove potrai vedere nella tua lista, il tuo codice.
+          </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><p>#2 "Come si <strong>modificano</strong> i codici?" </p></button>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"><p>#2 "Dove si <strong>vedono</strong> i codici scannerizzati?" </p></button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">aaaa</div>
+            <div class="accordion-body">Per rivedere il codice che hai scannerizzato, devi andare nella schermata principale e cliccare il codice che desideri visualizzare, nella schermata successiva troverai il codice che hai scannerizzato</div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><p>#3 "Come si <strong class="p-0">eliminano</strong> i codici?"</p></button>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><p>#3 "Dove si <strong>modificano o eliminano</strong> i codici?"</p></button>
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-            <div class="accordion-body">aaaaaa</div>
+            <div class="accordion-body">Hai la possibilità di interagire e modificare con il tuo codice cliccando il codice desiderato nella schermata principale. Oltre al nome e alla descrizione del codice l'applicazione dispone di 3 pulsanti:
+              <ul>
+                <li>Il pulsante "elimina", dove potrai eliminare il codice</li>
+                <li>Il pulsante "modifica" dove potrai modificare il codice,ripetendo il procedimento fatto con il tasto "+"</li>
+                <li>E il pulsante "preferiti" che permette di fissare tra i primi della lista, i tuoi codici</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
