@@ -34,7 +34,7 @@
     </div>
 </template>
 <script>
-    import { salvaModifiche} from '../../public/localStorage.js'
+    import { modificaCodice} from '../../public/localStorage.js'
     export default {
         props: {
             imglogo: String,
@@ -50,7 +50,7 @@
         },
         methods: {
             conferma(){
-                salvaModifiche(this.titolo)
+                modificaCodice(this.titolo)
             }
         }
     }

@@ -51,8 +51,9 @@ export function ordinaCodici(json_base){
 //Funzione per modificare un elemento esistente
 export function modificaCodice(titoloVecchio) {
     let currentStorage = readLocalStorage()
-    let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)
-    
+    let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)    
+    currentStorage[indice].titolo = document.getElementById("textTitolo").value
+    currentStorage[indice].descrizione = document.getElementById("textDescrizione").value
 }
 
 export function switchPreferiti(titolo) {
