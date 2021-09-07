@@ -49,11 +49,10 @@ export function ordinaCodici(json_base){
 }
 
 //Funzione per modificare un elemento esistente
-export function modificaCodice(vecchio, nuovo) {
-    let currentStorage = readLocalStorage();
-    let indice = currentStorage.indexOf(vecchio);
-    currentStorage[indice]=nuovo
-    localStorage.setItem("Codici", currentStorage)
+export function modificaCodice(titoloVecchio) {
+    let currentStorage = readLocalStorage()
+    let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)
+    
 }
 
 export function switchPreferiti(titolo) {
@@ -127,3 +126,5 @@ let provaa = [
 localStorage.setItem("Codici", JSON.stringify(provaa))
 
 */
+
+//funzione controllo validità titolo

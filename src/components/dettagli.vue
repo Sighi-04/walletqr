@@ -14,11 +14,11 @@
         </nav>
         <div class="container text-center my-4">
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea"></textarea>
+                <textarea class="form-control" id="textTitolo"></textarea>
                 <label for="floatingTextarea">Nome</label>
             </div><br>
             <div class="form-floating">
-                <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                <textarea class="form-control" id="textDescrizione" style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Descrizione (opzionale)</label>
             </div>
             <br>
@@ -28,13 +28,13 @@
                 <button type="button" class="btn btn-info">Scansiona nuovamente</button>
                 </router-link>
             <div class="container mt-3 pt-3">
-                <div class="container m-1"><router-link to="/visualizza"><button type="button" style="width:70%" class="btn btn-success btn-lg ">Conferma</button></router-link></div>            
+                <div class="container m-1"><router-link to="/visualizza"><button type="button" style="width:70%" class="btn btn-success btn-lg " @click="conferma">Conferma</button></router-link></div>            
             </div>
         </div>
     </div>
-
 </template>
 <script>
+    import { salvaModifiche} from '../../public/localStorage.js'
     export default {
         props: {
             imglogo: String,
@@ -47,6 +47,11 @@
             tipo: String,
             contenuto: String,
             caller: String
+        },
+        methods: {
+            conferma(){
+                salvaModifiche(this.titolo)
+            }
         }
     }
 </script>
