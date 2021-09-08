@@ -97,7 +97,7 @@ export function switchPreferiti(titolo) {
 
 let provaa = [
     {
-        "imglogo": "assets/Icone/test_logo.svg", 
+        "imglogo": "assets/Icone/tag_black_24dp.svg", 
         "titolo": "titolo prova 1",
         "imgtipo": "assets/icone/qrcode.svg",
         "imgpreferiti": "assets/icone/bookmark_fill.svg",
@@ -108,7 +108,7 @@ let provaa = [
         "contenuto": "contenuto di prova 1"
     },
     {
-        "imglogo": "assets/Icone/test_logo.svg", 
+        "imglogo":  "assets/Icone/tag_black_24dp.svg", 
         "titolo": "titolo prova 2",
         "imgtipo": "assets/icone/qrcode.svg",
         "imgpreferiti": "assets/icone/bookmark.svg",
@@ -119,7 +119,7 @@ let provaa = [
         "contenuto": "contenuto di prova 2"
     },
     {
-        "imglogo": "assets/Icone/test_logo.svg", 
+        "imglogo": "assets/Icone/tag_black_24dp.svg", 
         "titolo": "titolo prova 3",
         "imgtipo": "assets/icone/barcode.svg",
         "imgpreferiti": "assets/icone/bookmark_fill.svg",
@@ -130,7 +130,7 @@ let provaa = [
         "contenuto": "contenuto di prova 3"
     },
     {
-        "imglogo": "assets/Icone/test_logo.svg", 
+        "imglogo": "assets/Icone/tag_black_24dp.svg", 
         "titolo": "titolo prova 4",
         "imgtipo": "assets/icone/barcode.svg",
         "imgpreferiti": "assets/icone/bookmark.svg",
