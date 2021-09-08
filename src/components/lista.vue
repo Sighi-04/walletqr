@@ -8,7 +8,7 @@
           </button>
           <div style="width:85%;max-width:500px" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Opzioni</h5>
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Informazioni</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
@@ -67,12 +67,13 @@
         <div class="container">
           <div v-if="codici==null">
             <div class="container my-5">
-              <div class="text-center">
-                <figure class="figure">
+              <div class="text-center align-middle">
+                <figure class="figure shadow p-3 mb-5 bg-body rounded">
                   <img src="Assets/Icone/empty.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
                     <figcaption class="figure-caption">Non ci sono codici salvati,<br>
-                      premi "+" per aggiungerne uno</figcaption>
-                    </figure>
+                      premi "+" per aggiungerne uno
+                    </figcaption>
+                </figure>
                </div>
               </div>
             </div>

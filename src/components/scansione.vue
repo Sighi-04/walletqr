@@ -8,12 +8,12 @@
             </div>
         </nav>
         <div class="my-4">        
-            <div class="container my-2">
+            <div class="container">
                 <StreamBarcodeReader style="height:60%" class="pt-5 pb-5-5 mb-3 mt-5"
                     @decode="onDecode">
                 </StreamBarcodeReader>
             </div>
-            <div class="container">
+            <div class="container mt-4">
             <div class="alert alert-info my-3" role="alert">
                 <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                 <div>
@@ -21,7 +21,7 @@
                 </div>
             </div>
                 <div class="my-4" id="reader" width="600px"></div>
-                <router-link :to="{name: caller}"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></router-link>
+                <aa @click="$router.go(-1)"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></aa>
                 </div>
         </div>
         <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
