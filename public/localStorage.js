@@ -149,8 +149,12 @@ localStorage.setItem("Codici", JSON.stringify(provaa))
 export function caricaDati(titolo, descrizione){
     let boxtitolo = document.getElementById("textTitolo")
     let boxdescrizione = document.getElementById("textDescrizione")
-    boxtitolo.value = titolo;
+    if(titolo) {
+        boxtitolo.value = titolo;
+    }
+    if(descrizione) {
     boxdescrizione.value = descrizione;
+    }
 }
 
 //funzione controllo validità titolo

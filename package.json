@@ -12,7 +12,8 @@
     "html5-qrcode": "^2.0.11",
     "vue": "^2.6.11",
     "vue-barcode-reader": "^0.0.3",
-    "vue-router": "^3.5.2"
+    "vue-router": "^3.5.2",
+    "vue-weblineindia-qrcode": "^1.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

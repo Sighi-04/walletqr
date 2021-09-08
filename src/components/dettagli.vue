@@ -15,11 +15,11 @@
         <div class="container text-center my-4">
             <div class="form-floating">
                 <textarea class="form-control" id="textTitolo"></textarea>
-                <label for="floatingTextarea">Nome</label>
+                <label for="textTitolo">Nome</label>
             </div><br>
             <div class="form-floating">
                 <textarea class="form-control" id="textDescrizione" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Descrizione (opzionale)</label>
+                <label for="textDescrizione">Descrizione (opzionale)</label>
             </div>
             <br>
         </div>
@@ -69,13 +69,15 @@
                         "tipo": null,
                         "contenuto": this.contenuto
                     }
+                    console.log("stai aggiungendo")
                     addToLocalStorage(elemento)
                 }
                 else {
+                    console.log("stai modificando")
                     modificaCodice(this.titolo)
                 }
                 this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: this.imgpreferiti}})
-            }
+           }
         }
     }
 </script>
