@@ -93,7 +93,7 @@ export function switchPreferiti(titolo) {
 }
 
 //dati di prova
-/*
+
 let provaa = [
     {
         "imglogo": "assets/Icone/test_logo.svg", 
@@ -143,7 +143,7 @@ let provaa = [
 
 localStorage.setItem("Codici", JSON.stringify(provaa))
 
-*/
+
 
 export function caricaDati(titolo, descrizione){
     let boxtitolo = document.getElementById("textTitolo")

@@ -24,11 +24,17 @@
             <br>
         </div>
         <div class="container mt-4 pt-4 text-center">
-            <router-link :to="{ name: 'scansione', params: { caller: 'dettagli'}}">
-                <button type="button" class="btn btn-info">Scansiona nuovamente</button>
-                </router-link>
-            <div class="container mt-3 pt-3">
-                <div class="container m-1"><router-link to="/visualizza"><button type="button" style="width:70%" class="btn btn-success btn-lg">Conferma</button></router-link></div>            
+            <div class="container my-4">
+                <div class="container my-4">
+                    <router-link :to="{ name: 'scansione', params: { caller: 'dettagli'}}">
+                        <button type="button" style="width:70%" class="btn btn-outline-primary my-5"><img src="assets/Icone/qr_code_scanner_black_24dp.svg"><span> Scansiona nuovamente</span></button>
+                    </router-link>
+                </div>
+                <div class="container my-4 pt-4">
+                    <router-link to="/visualizza">
+                        <button type="button" style="width:70%" class="btn btn-success btn-lg">Conferma</button>
+                    </router-link>
+                </div>            
             </div>
         </div>
     </div>
