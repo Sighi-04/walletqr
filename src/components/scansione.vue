@@ -21,7 +21,7 @@
                 </div>
             </div>
                 <div class="my-4" id="reader" width="600px"></div>
-                <aa @click="$router.go(-1)"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></aa>
+                <a @click="$router.go(-1)"><button type="button" class="btn btn-danger" style="width:70%;">Annulla</button></a>
                 </div>
         </div>
         <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">

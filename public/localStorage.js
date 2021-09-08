@@ -13,6 +13,7 @@ export function readLocalStorage () {
 
 //Funzione per aggiungere un codice a localStorage
 export function addToLocalStorage (elemento) {
+    console.log("addlocalstoragefunzionepazza")
     //ottengo i contenuti attuali
     let currentStorage = readLocalStorage()
     if(currentStorage==null) {
