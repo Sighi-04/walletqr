@@ -31,9 +31,7 @@
                     </router-link>
                 </div>
                 <div class="container my-4 pt-4">
-                    <router-link to="/visualizza">
-                        <button type="button" style="width:70%" class="btn btn-success btn-lg">Conferma</button>
-                    </router-link>
+                        <button type="button" style="width:70%" @click="salva" class="btn btn-success btn-lg">Conferma</button>
                 </div>            
             </div>
         </div>
@@ -76,6 +74,7 @@
                 else {
                     modificaCodice(this.titolo)
                 }
+                this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: this.imgpreferiti}})
             }
         }
     }
