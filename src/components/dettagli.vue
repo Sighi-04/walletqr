@@ -28,13 +28,13 @@
                 <button type="button" class="btn btn-info">Scansiona nuovamente</button>
                 </router-link>
             <div class="container mt-3 pt-3">
-                <div class="container m-1"><router-link to="/visualizza"><button type="button" style="width:70%" class="btn btn-success btn-lg " @click="conferma">Conferma</button></router-link></div>            
+                <div class="container m-1"><router-link to="/visualizza"><button type="button" style="width:70%" class="btn btn-success btn-lg">Conferma</button></router-link></div>            
             </div>
         </div>
     </div>
 </template>
 <script>
-    import { modificaCodice} from '../../public/localStorage.js'
+    import { caricaDati, modificaCodice} from '../../public/localStorage.js'
     export default {
         props: {
             imglogo: String,
@@ -48,8 +48,11 @@
             contenuto: String,
             caller: String
         },
+        mounted(){
+            caricaDati(this.titolo, this.descrizione)
+        },
         methods: {
-            conferma(){
+            salva() {
                 modificaCodice(this.titolo)
             }
         }
