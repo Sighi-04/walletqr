@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "html5-qrcode": "^2.0.11",
+    "qrcode": "^1.4.4",
     "vue": "^2.6.11",
     "vue-barcode-reader": "^0.0.3",
     "vue-router": "^3.5.2",

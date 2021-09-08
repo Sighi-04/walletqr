@@ -15,7 +15,7 @@
                     <figcaption class="figure-caption"><h3>Descrizione</h3><br><br>{{descrizione}}</figcaption>
                   </figure>
                 <div class="container my-5 text-center">
-                    <img src="assets/icone/qrcode.svg" style="width: 250px;" class="rounded img-fluid img-thumbnail shadow p-3 mb-5 bg-body rounded" alt="qrcode">
+                    <VueQrCode :value="contenuto"></VueQrCode>
                 </div>
         </div>
         <div class="container text-center my-5">
@@ -62,6 +62,7 @@
 </template>
 
 <script>
+    import VueQrCode from 'vue-weblineindia-qrcode'
     import { switchPreferiti, removeFromLocalStorage } from '../../public/localStorage.js'
     export default {
     name: 'visualizza',
@@ -75,6 +76,9 @@
         tag: String,
         tipo: String,
         contenuto: String
+    },
+    components: {
+        VueQrCode
     },
     methods: {
         clickPreferiti() {

@@ -1,5 +1,5 @@
 <template>
-     <router-link style="text-decoration:none;color:black;" :to="{ name: 'visualizza', params: { titolo: titolo, descrizione: descrizione, imgpreferiti: imgpreferiti }}">
+     <router-link style="text-decoration:none;color:black;" :to="{ name: 'visualizza', params: { titolo: titolo, descrizione: descrizione, imgpreferiti: imgpreferiti, contenuto: contenuto, imgpreferiti: imgpreferiti }}">
                 <div class="row py-3">
                     <div class="col-2">
                         <img :src="imglogo" :alt="imglogo" width="24px" height="24px">

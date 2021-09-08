@@ -94,7 +94,7 @@ export function switchPreferiti(titolo) {
 }
 
 //dati di prova
-
+/*
 let provaa = [
     {
         "imglogo": "assets/Icone/tag_black_24dp.svg", 
@@ -143,7 +143,7 @@ let provaa = [
 ]
 
 localStorage.setItem("Codici", JSON.stringify(provaa))
-
+*/
 
 
 export function caricaDati(titolo, descrizione){
