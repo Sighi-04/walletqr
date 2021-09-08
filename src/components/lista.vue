@@ -12,6 +12,13 @@
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
+              <div id="container">
+              <div class="form-check form-switch">
+                <input onclick="document.body.classList.toggle(dark-mode)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Dark mode</label>
+              </div>   
+              </div>
+              <hr>
             <div>
               <div class="accordion shadow p-3 mb-5 bg-body rounded" id="accordionExample">
                 <div class="accordion-item">
@@ -19,7 +26,7 @@
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" ><p>#0 "A <strong>cosa serve </strong>quest'app?"</p> </button>
                   </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">Questa app è un portafoglio di di codici!<br> Attraverso la scannerizzazione dei codici all'interno di quest'app, l'algoritmo potrà memorizzare e ricreare quando più ne hai bisogno il codice che ti serve senza che l'immagine possa dare probllemi di risoluzione , dovuti per esempio alla fotocamera o alla qualità dell'immagine</div>
+                  <div class="accordion-body">Questa app è un portafoglio di di codici!<br> Attraverso la scannerizzazione dei codici all'interno di quest'app, l'algoritmo potrà memorizzare e ricreare quando più ne hai bisogno il codice che ti serve senza che l'immagine possa dare problemi di risoluzione , dovuti per esempio alla fotocamera o alla qualità dell'immagine</div>
                 </div>
             </div>
             <div class="accordion-item">
@@ -88,8 +95,9 @@
   </template>
 
 <script>
+   
   import codiceLista from './codiceLista.vue'
-  import { readLocalStorage } from '../../public/localStorage.js'
+  import { readLocalStorage} from '../../public/localStorage.js'
   export default {
   name: 'lista',
   components: {
@@ -102,6 +110,15 @@
       }
   }
   }
+  
+
+
+
 </script>
 
-
+<style scoped>
+  .darkmode{
+      background-color: black;
+      color: white;
+  }
+</style>
