@@ -1,6 +1,8 @@
  //Funzione per leggere il contenuto di localStorage - 
 //Se non ci sono codici salvati restituisco null, altrimenti il json ottenuto dalla stringa localstorage
 
+import { Array } from "core-js"
+
 export function readLocalStorage () {
     let response = localStorage.getItem("Codici")
     if (!response || response=="[]") {
@@ -16,10 +18,20 @@ export function readLocalStorage () {
 export function addToLocalStorage (elemento) {
     //ottengo i contenuti attuali
     let currentStorage = readLocalStorage()
-    //aggiungo l'elemento ricevuto come parametro
-    currentStorage.push(elemento)
-    //converto in stringa il nuovo json e lo salvo su localStorage
-    localStorage.setItem("Codici",JSON.stringify(currentStorage))
+    if(currentStorage==null) {
+        currentStorage = new Array()
+    }
+    if(controllaDisponibilitaTitolo(elemento.titolo)) {
+        //aggiungo l'elemento ricevuto come parametro1
+        currentStorage.push(elemento)
+        //converto in stringa il nuovo json e lo salvo su localStorage
+        localStorage.setItem("Codici",JSON.stringify(currentStorage))
+    }
+    else {
+        alert("Titolo già in uso")
+    }
+    
+    
 }
 
 //Funzione per rimuovere un elemento da localStorage, dato il suo indice
@@ -53,12 +65,15 @@ export function modificaCodice(titoloVecchio) {
     console.log(titoloVecchio)
     
     let currentStorage = readLocalStorage()
-    let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)    
-    currentStorage[indice].titolo = document.getElementById('textTitolo').value
-    currentStorage[indice].descrizione = document.getElementById('textDescrizione').value
-    localStorage.setItem("Codici", JSON.stringify(currentStorage))
-    
-   console.log(document.getElementById('textTitolo'))
+    let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)  
+    if(controllaDisponibilitaTitolo(document.getElementById('textTitolo').value)) {
+        currentStorage[indice].titolo = document.getElementById('textTitolo').value
+        currentStorage[indice].descrizione = document.getElementById('textDescrizione').value
+        localStorage.setItem("Codici", JSON.stringify(currentStorage))
+        }
+    else {
+        alert("Titolo già in uso")
+    }  
 }
 
 export function switchPreferiti(titolo) {
