@@ -67,8 +67,8 @@
         <div class="container">
           <div v-if="codici==null">
             <div class="container my-5">
-              <div class="text-center align-middle">
-                <figure class="figure shadow p-3 mb-5 bg-body rounded">
+              <div class="text-center py-5">
+                <figure class="figure ">
                   <img src="Assets/Icone/empty.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
                     <figcaption class="figure-caption">Non ci sono codici salvati,<br>
                       premi "+" per aggiungerne uno
@@ -103,3 +103,5 @@
   }
   }
 </script>
+
+
