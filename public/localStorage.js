@@ -1,8 +1,5 @@
  //Funzione per leggere il contenuto di localStorage - 
 //Se non ci sono codici salvati restituisco null, altrimenti il json ottenuto dalla stringa localstorage
-
-import { Array } from "core-js"
-
 export function readLocalStorage () {
     let response = localStorage.getItem("Codici")
     if (!response || response=="[]") {

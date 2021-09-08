@@ -34,7 +34,7 @@
     </div>
 </template>
 <script>
-    import { caricaDati, modificaCodice} from '../../public/localStorage.js'
+    import { addToLocalStorage, caricaDati, modificaCodice} from '../../public/localStorage.js'
     export default {
         props: {
             imglogo: String,
@@ -53,7 +53,23 @@
         },
         methods: {
             salva() {
-                modificaCodice(this.titolo)
+                if(this.caller=='scansione'){
+                    let elemento = {
+                        "imglogo": 'assets/icone/test_logo.svg', 
+                        "titolo": document.getElementById('textTitolo').value,
+                        "imgtipo": 'assets/icone/qrcode.svg',
+                        "imgpreferiti": 'assets/ione/bookmark.svg',
+                        "descrizione": document.getElementById('textDescrizione').value,
+                        "isBookmarked": false,
+                        "tag": null,
+                        "tipo": null,
+                        "contenuto": this.contenuto
+                    }
+                    addToLocalStorage(elemento)
+                }
+                else {
+                    modificaCodice(this.titolo)
+                }
             }
         }
     }
