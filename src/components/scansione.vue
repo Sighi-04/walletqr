@@ -33,7 +33,6 @@
 
 <script>
 import { readLocalStorage } from '../../public/localStorage.js'
-import VueRouter from '../router/index.js'
 import { StreamBarcodeReader } from "vue-barcode-reader"
 export default {
     name: 'scansione',
@@ -49,7 +48,7 @@ export default {
     },
     methods: {
         onDecode (result) {
-                VueRouter.push({name: 'dettagli', params: {contenuto: result}});
+                this.$router.push({name: 'dettagli', params: {contenuto: result}});
                     //permette lo spostamento quando il codice viene scannerizzati
             }   
      },
