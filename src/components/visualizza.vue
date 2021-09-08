@@ -15,7 +15,7 @@
                     <figcaption class="figure-caption"><h3>Descrizione</h3><br><br>{{descrizione}}</figcaption>
                   </figure>
                 <div class="container my-5 text-center">
-                    <VueQrCode :value="contenuto"></VueQrCode>
+                    <VueQrCode class="" style="width:300px" :value="contenuto"></VueQrCode>
                 </div>
         </div>
         <div class="container text-center my-5">
@@ -26,7 +26,7 @@
                   </button>
              </div>
               <div class="col">
-                  <router-link :to="{name: 'dettagli', params: {caller: 'visualizza', titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti}}">
+                  <router-link :to="{name: 'dettagli', params: {caller: 'visualizza', titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti, isBookmarked:isBookmarked}}">
                     <button type="button"  class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded">
                         <img class="img-thumbnail" width="40px" src="assets/Icone/edit_icon.svg">
                     </button>                      

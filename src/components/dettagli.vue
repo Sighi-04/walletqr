@@ -2,7 +2,7 @@
     <div>            
         <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
-                <router-link :to="{name: caller, params: {titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti}}">
+                <router-link :to="{name: caller, params: {titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti,isBookmarked: isBookmarked}}">
                     <a class="navbar-brand">
                         <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
                     </a>                
