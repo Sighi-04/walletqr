@@ -50,10 +50,15 @@ export function ordinaCodici(json_base){
 
 //Funzione per modificare un elemento esistente
 export function modificaCodice(titoloVecchio) {
+    console.log(titoloVecchio)
+    
     let currentStorage = readLocalStorage()
     let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)    
-    currentStorage[indice].titolo = document.getElementById("textTitolo").value
-    currentStorage[indice].descrizione = document.getElementById("textDescrizione").value
+    currentStorage[indice].titolo = document.getElementById('textTitolo').value
+    currentStorage[indice].descrizione = document.getElementById('textDescrizione').value
+    localStorage.setItem("Codici", JSON.stringify(currentStorage))
+    
+   console.log(document.getElementById('textTitolo'))
 }
 
 export function switchPreferiti(titolo) {
@@ -76,7 +81,7 @@ export function switchPreferiti(titolo) {
 }
 
 //dati di prova
-
+/*
 let provaa = [
     {
         "imglogo": "assets/Icone/test_logo.svg", 
@@ -126,6 +131,24 @@ let provaa = [
 
 localStorage.setItem("Codici", JSON.stringify(provaa))
 
+*/
 
+export function caricaDati(titolo, descrizione){
+    let boxtitolo = document.getElementById("textTitolo")
+    let boxdescrizione = document.getElementById("textDescrizione")
+    boxtitolo.value = titolo;
+    boxdescrizione.value = descrizione;
+}
 
 //funzione controllo validità titolo
+export function controllaDisponibilitaTitolo(titolo) {
+    let currentStorage = readLocalStorage()
+    if(currentStorage!=null) {
+        currentStorage.forEach(codice=>{
+            if(codice.titolo==titolo) {
+                return false
+            }
+        })
+    }
+    return true
+}
