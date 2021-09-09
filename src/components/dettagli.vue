@@ -38,7 +38,7 @@
     </div>
 </template>
 <script>
-    import { addToLocalStorage, caricaDati, modificaCodice} from '../../public/localStorage.js'
+    import { addToLocalStorage, caricaDati, modificaCodice, controllaDisponibilitaTitolo} from '../../public/localStorage.js'
     export default {
         props: {
             titolo: String,
@@ -55,7 +55,8 @@
         },
         methods: {
             salva() {
-                if(this.caller=='scansione'){
+                if(controllaDisponibilitaTitolo(document.getElementById('textTitolo').value)){
+                    if(this.caller=='scansione'){
                     let elemento = {
                         "imglogo": 'assets/icone/test_logo.svg', 
                         "titolo": document.getElementById('textTitolo').value,
@@ -76,6 +77,10 @@
                 }
                 
                 this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: 'assets/icone/bookmark.svg',isBookmarked: this.isBookmarked, contenuto: this.contenuto}})
+                }
+                else {
+                    alert('Titolo vuoto o già in uso')
+                }
            }
         }
     }

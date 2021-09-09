@@ -13,23 +13,15 @@ export function readLocalStorage () {
 
 //Funzione per aggiungere un codice a localStorage
 export function addToLocalStorage (elemento) {
-    console.log("addlocalstoragefunzionepazza")
     //ottengo i contenuti attuali
     let currentStorage = readLocalStorage()
     if(currentStorage==null) {
         currentStorage = new Array()
     }
-    if(controllaDisponibilitaTitolo(elemento.titolo)) {
-        //aggiungo l'elemento ricevuto come parametro1
-        currentStorage.push(elemento)
-        //converto in stringa il nuovo json e lo salvo su localStorage
-        localStorage.setItem("Codici",JSON.stringify(currentStorage))
-    }
-    else {
-        alert("Titolo già in uso")
-    }
-    
-    
+    //aggiungo l'elemento ricevuto come parametro1
+    currentStorage.push(elemento)
+    //converto in stringa il nuovo json e lo salvo su localStorage
+    localStorage.setItem("Codici",JSON.stringify(currentStorage))
 }
 
 //Funzione per rimuovere un elemento da localStorage, dato il suo indice
@@ -60,19 +52,12 @@ export function ordinaCodici(json_base){
 
 //Funzione per modificare un elemento esistente
 export function modificaCodice(titoloVecchio) {
-    console.log(titoloVecchio)
-    
     let currentStorage = readLocalStorage()
     let indice = currentStorage.findIndex(x => x.titolo===titoloVecchio)  
-    if(controllaDisponibilitaTitolo(document.getElementById('textTitolo').value)) {
-        currentStorage[indice].titolo = document.getElementById('textTitolo').value
-        currentStorage[indice].descrizione = document.getElementById('textDescrizione').value
-        localStorage.setItem("Codici", JSON.stringify(currentStorage))
-        }
-    else {
-        alert("Titolo già in uso")
-    }  
-}
+    currentStorage[indice].titolo = document.getElementById('textTitolo').value
+    currentStorage[indice].descrizione = document.getElementById('textDescrizione').value
+    localStorage.setItem("Codici", JSON.stringify(currentStorage))
+    }
 
 export function switchPreferiti(titolo) {
     let currentStorage = readLocalStorage()
@@ -160,12 +145,18 @@ export function caricaDati(titolo, descrizione){
 //funzione controllo validità titolo
 export function controllaDisponibilitaTitolo(titolo) {
     let currentStorage = readLocalStorage()
-    if(currentStorage!=null) {
-        currentStorage.forEach(codice=>{
-            if(codice.titolo==titolo) {
-                return false
-            }
-        })
+    let disponibile = true;
+    if(titolo=="") {
+        disponibile = false;
     }
-    return true
+    else {
+        if(currentStorage!=null) {
+            currentStorage.forEach(codice=>{
+                if(codice.titolo==titolo) {
+                    disponibile = false
+                }
+            })
+        }
+    }
+    return disponibile
 }
