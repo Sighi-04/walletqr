@@ -3,7 +3,7 @@
            <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
                 <router-link to="/">
-                    <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
+                    <img src="assets/icone/back_arrow.svg" alt="indietro" width="34" height="34">
                 </router-link>
                 <div class="text-center">
                     <span class="navbar-brand mb-0 h1">Gestione dati</span>

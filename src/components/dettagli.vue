@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <router-link :to="{name: caller, params: {titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti,isBookmarked: isBookmarked, tipo: tipo, action: action}}">
                     <a class="navbar-brand">
-                        <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
+                        <img src="assets/icone/back_arrow.svg" alt="indietro" width="34" height="34">
                     </a>                
                 </router-link>
                 <div class="text-center">
@@ -27,7 +27,7 @@
             <div class="container my-4">
                 <div class="container my-4">
                     <router-link :to="{ name: 'scansione', params: { caller: 'dettagli', action: action, titolo: titolo, descrizione: descrizione, contenuto: contenuto, imgpreferiti: imgpreferiti, imgtipo: imgtipo}}">
-                        <button type="button" style="width:70%" class="btn btn-outline-primary my-5"><img src="assets/Icone/qr_code_scanner_black_24dp.svg"><span> Scansiona nuovamente</span></button>
+                        <button type="button" style="width:70%" class="btn btn-outline-primary my-5"><img src="assets/icone/qr_code_scanner_black_24dp.svg"><span> Scansiona nuovamente</span></button>
                     </router-link>
                 </div>
                 <div class="container my-4 pt-4">

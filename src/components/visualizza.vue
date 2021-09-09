@@ -3,7 +3,7 @@
     <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
                 <router-link to="/">
-                    <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
+                    <img src="assets/icone/back_arrow.svg" alt="indietro" width="34" height="34">
                 </router-link>
                 <div class="text-center">
                     <span class="navbar-brand mb-0 h1">{{titolo}}</span>
@@ -23,13 +23,13 @@
             <div class="row pt-5">
               <div class="col">
                   <button type="button"  class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded" data-bs-toggle="modal" data-bs-target="#myModal" >
-                        <img class="img-thumbnail" width="40px" src="assets/Icone/delete_icon.svg">
+                        <img class="img-thumbnail" width="40px" src="assets/icone/delete_icon.svg">
                   </button>
              </div>
               <div class="col">
                   <router-link :to="{name: 'dettagli', params: {caller: 'visualizza', titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti, isBookmarked:isBookmarked, action: 'modifica'}}">
                     <button type="button"  class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded">
-                        <img class="img-thumbnail" width="40px" src="assets/Icone/edit_icon.svg">
+                        <img class="img-thumbnail" width="40px" src="assets/icone/edit_icon.svg">
                     </button>                      
                   </router-link>
             </div>

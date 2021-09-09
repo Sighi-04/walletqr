@@ -4,7 +4,7 @@
       <div class="container-fluid ">
         <li type="none" id="clicca">
           <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            <img id="preferiti2" src="assets/Icone/bars_menu.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top p-0"> 
+            <img id="preferiti2" src="assets/icone/bars_menu.svg" alt="menuButton" width="34" height="34" class="d-inline-block align-text-top p-0"> 
           </button>
           <div style="width:85%;max-width:500px" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
@@ -39,7 +39,7 @@
             <div class="container my-5">
               <div class="text-center py-5">
                 <figure class="figure ">
-                  <img src="Assets/Icone/empty.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
+                  <img src="Assets/icone/empty.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
                     <figcaption class="figure-caption">Non ci sono codici salvati,<br>
                       premi "+" per aggiungerne uno
                     </figcaption>
@@ -47,7 +47,7 @@
                </div>
               </div>
             </div>
-          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/Icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
+          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         </div>
         <div class="position-fixed bottom-0 end-0">
         <div class="btn-group" role="group" aria-label="Basic example">
