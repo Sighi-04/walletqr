@@ -2,7 +2,7 @@
     <div>            
         <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
-                <router-link :to="{name: caller, params: {titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti,isBookmarked: isBookmarked}}">
+                <router-link :to="{name: caller, params: {titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti,isBookmarked: isBookmarked, tipo: tipo, action: action}}">
                     <a class="navbar-brand">
                         <img src="assets/Icone/back_arrow.svg" alt="indietro" width="34" height="34">
                     </a>                
@@ -26,7 +26,7 @@
         <div class="container mt-4 pt-4 text-center">
             <div class="container my-4">
                 <div class="container my-4">
-                    <router-link :to="{ name: 'scansione', params: { caller: 'dettagli', action: action, titolo: titolo, descrizione: descrizione, contenuto: contenuto}}">
+                    <router-link :to="{ name: 'scansione', params: { caller: 'dettagli', action: action, titolo: titolo, descrizione: descrizione, contenuto: contenuto, imgpreferiti: imgpreferiti, imgtipo: imgtipo}}">
                         <button type="button" style="width:70%" class="btn btn-outline-primary my-5"><img src="assets/Icone/qr_code_scanner_black_24dp.svg"><span> Scansiona nuovamente</span></button>
                     </router-link>
                 </div>
@@ -58,16 +58,16 @@
             salva() {
                 if(this.action=='modifica') {
                     modificaCodice(this.titolo)
-                    this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: 'assets/icone/bookmark.svg',isBookmarked: this.isBookmarked, contenuto: this.contenuto}})
+                    this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: this.imgpreferiti,isBookmarked: this.isBookmarked, contenuto: this.contenuto, tipo: this.tipo, imgtipo: this.imgtipo}})
                 }
                 else {
                     if(controllaDisponibilitaTitolo(document.getElementById('textTitolo').value)){
                     if(this.caller=='scansione'){
                     let elemento = {
-                        "imglogo": 'assets/icone/test_logo.svg', 
+                        "imglogo": this.imglogo, 
                         "titolo": document.getElementById('textTitolo').value,
-                        "imgtipo": 'assets/icone/qrcode.svg',
-                        "imgpreferiti": 'assets/ione/bookmark.svg',
+                        "imgtipo": this.imgtipo,
+                        "imgpreferiti": this.imgpreferiti,
                         "descrizione": document.getElementById('textDescrizione').value,
                         "isBookmarked": false,
                         "tag": null,
@@ -76,8 +76,8 @@
                     }
                     addToLocalStorage(elemento)
                 }
-                this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: 'assets/icone/bookmark.svg',isBookmarked: this.isBookmarked, contenuto: this.contenuto}})
-                }
+                        this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: this.imgpreferiti,isBookmarked: this.isBookmarked, contenuto: this.contenuto, tipo: this.tipo, imgtipo: this.imgtipo}})
+                    }
                 }
                 
             } 
