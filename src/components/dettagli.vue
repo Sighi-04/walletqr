@@ -41,13 +41,11 @@
     import { addToLocalStorage, caricaDati, modificaCodice} from '../../public/localStorage.js'
     export default {
         props: {
-            imglogo: String,
             titolo: String,
             imgtipo: String,
             imgpreferiti: String,
             descrizione: String,
             isBookmarked: Boolean,
-            tag: String,
             tipo: String,
             contenuto: String,
             caller: String
@@ -76,6 +74,7 @@
                     console.log("stai modificando")
                     modificaCodice(this.titolo)
                 }
+                
                 this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: 'assets/icone/bookmark.svg',isBookmarked: this.isBookmarked, contenuto: this.contenuto}})
            }
         }
