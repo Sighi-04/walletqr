@@ -26,7 +26,7 @@
         <div class="container mt-4 pt-4 text-center">
             <div class="container my-4">
                 <div class="container my-4">
-                    <router-link :to="{ name: 'scansione', params: { caller: 'dettagli'}}">
+                    <router-link :to="{ name: 'scansione', params: { caller: 'dettagli', action: action, titolo: titolo, descrizione: descrizione, contenuto: contenuto}}">
                         <button type="button" style="width:70%" class="btn btn-outline-primary my-5"><img src="assets/Icone/qr_code_scanner_black_24dp.svg"><span> Scansiona nuovamente</span></button>
                     </router-link>
                 </div>
@@ -48,14 +48,20 @@
             isBookmarked: Boolean,
             tipo: String,
             contenuto: String,
-            caller: String
+            caller: String,
+            action: String
         },
         mounted(){
             caricaDati(this.titolo, this.descrizione)
         },
         methods: {
             salva() {
-                if(controllaDisponibilitaTitolo(document.getElementById('textTitolo').value)){
+                if(this.action=='modifica') {
+                    modificaCodice(this.titolo)
+                    this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: 'assets/icone/bookmark.svg',isBookmarked: this.isBookmarked, contenuto: this.contenuto}})
+                }
+                else {
+                    if(controllaDisponibilitaTitolo(document.getElementById('textTitolo').value)){
                     if(this.caller=='scansione'){
                     let elemento = {
                         "imglogo": 'assets/icone/test_logo.svg', 
@@ -68,20 +74,13 @@
                         "tipo": null,
                         "contenuto": this.contenuto
                     }
-                    console.log("stai aggiungendo")
                     addToLocalStorage(elemento)
                 }
-                else {
-                    console.log("stai modificando")
-                    modificaCodice(this.titolo)
-                }
-                
                 this.$router.push({name: 'visualizza', params: {titolo: document.getElementById('textTitolo').value, descrizione: document.getElementById('textDescrizione').value, imgpreferiti: 'assets/icone/bookmark.svg',isBookmarked: this.isBookmarked, contenuto: this.contenuto}})
                 }
-                else {
-                    alert('Titolo vuoto o già in uso')
                 }
-           }
+                
+            } 
         }
     }
 </script>

@@ -48,12 +48,17 @@ export default {
     },
     methods: {
         onDecode (result) {
-                this.$router.push({name: 'dettagli', params: {contenuto: result, caller: 'scansione'}});
+                this.$router.push({name: 'dettagli', params: {contenuto: result, caller: 'scansione', action: this.action, titolo: this.titolo, descrizione: this.descrizione}});
                     //permette lo spostamento quando il codice viene scannerizzati
             }   
      },
      props: {
-        caller: String
+        caller: String,
+        action: String,
+        titolo: String, 
+        descrizione: String, 
+        contenuto: String,
+        imgpreferiti: String,
     }
 }
 </script>
