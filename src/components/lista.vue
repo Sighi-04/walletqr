@@ -16,7 +16,12 @@
               <div class="form-check form-switch">
                 <input onclick="document.body.classList.toggle(dark-mode)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                   <label class="form-check-label" for="flexSwitchCheckDefault">Dark mode</label>
-              </div>   
+              </div> 
+              <hr>
+              <div>
+                <img src="assets/icone/backup.svg">
+                <router-link to="backup" class="link">Backup e Ripristino</router-link>
+              </div>  
               </div>
               <hr>
             <div>
@@ -83,5 +88,9 @@
   .btn-group a {
     color: black;
     text-decoration: none;
+  }
+  .link {
+    text-decoration: none;
+    color: black;
   }
 </style>
