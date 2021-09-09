@@ -45,12 +45,10 @@
           <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/Icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         </div>
         <div class="position-fixed bottom-0 end-0">
-        <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}">
-          <button type="button" style="width:70%" class="btn btn-success btn-lg">Aggiungi Codice QR</button>
-        </router-link>
-        <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}">
-          <button type="button" style="width:70%" class="btn btn-success btn-lg">Aggiungi Code39</button>
-        </router-link>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}">Aggiungi Codice QR</router-link></button>
+          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}">Aggiungi Code39</router-link></button>
+        </div>
       </div>
     </div>
   </template>
@@ -81,5 +79,9 @@
   .darkmode {
       background-color: black;
       color: white;
+  }
+  .btn-group a {
+    color: black;
+    text-decoration: none;
   }
 </style>
