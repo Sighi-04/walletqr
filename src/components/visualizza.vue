@@ -26,7 +26,7 @@
                   </button>
              </div>
               <div class="col">
-                  <router-link :to="{name: 'dettagli', params: {caller: 'visualizza', titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti, isBookmarked:isBookmarked}}">
+                  <router-link :to="{name: 'dettagli', params: {caller: 'visualizza', titolo: titolo, descrizione: descrizione, contenuto: contenuto, tipo: tipo, imgpreferiti: imgpreferiti, isBookmarked:isBookmarked, action: 'modifica'}}">
                     <button type="button"  class="btn p-0 shadow-sm p-3 mb-5 bg-body rounded">
                         <img class="img-thumbnail" width="40px" src="assets/Icone/edit_icon.svg">
                     </button>                      
@@ -75,7 +75,7 @@
         isBookmarked: Boolean,
         tag: String,
         tipo: String,
-        contenuto: String
+        contenuto: String,
     },
     components: {
         VueQrCode
