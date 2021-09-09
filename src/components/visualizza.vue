@@ -16,7 +16,7 @@
                   </figure>
                 <div class="container my-5 text-center">
                     <VueQrCode v-if="tipo=='QR'" class="" style="width:300px" :value="contenuto"></VueQrCode>
-                    <barcode v-else :value="contenuto" format="code39"></barcode>
+                    <barcode v-else :value="contenuto" width="1px" format="code39"></barcode>
                 </div>
         </div>
         <div class="container text-center my-5">
