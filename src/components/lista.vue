@@ -45,8 +45,11 @@
           <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/Icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         </div>
         <div class="position-fixed bottom-0 end-0">
-        <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi'}}">
-          <img style="min-width: 50px;" src="assets/Icone/add_circle.svg" alt="aggiungi">
+        <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR'}}">
+          <img style="min-width: 50px;" src="assets/Icone/qr_scanner.svg" alt="aggiungi">
+        </router-link>
+        <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar'}}">
+          <img style="min-width: 50px;" src="assets/Icone/barcode.svg" alt="aggiungi">
         </router-link>
       </div>
     </div>

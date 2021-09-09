@@ -15,7 +15,8 @@
                     <figcaption class="figure-caption"><h3>Descrizione</h3><br><br>{{descrizione}}</figcaption>
                   </figure>
                 <div class="container my-5 text-center">
-                    <VueQrCode class="" style="width:300px" :value="contenuto"></VueQrCode>
+                    <VueQrCode v-if="tipo=='QR'" class="" style="width:300px" :value="contenuto"></VueQrCode>
+                    <barcode v-else :value="contenuto" format="code39"></barcode>
                 </div>
         </div>
         <div class="container text-center my-5">
@@ -63,6 +64,7 @@
 
 <script>
     import VueQrCode from 'vue-weblineindia-qrcode'
+    import VueBarcode from 'vue-barcode';
     import { switchPreferiti, removeFromLocalStorage } from '../../public/localStorage.js'
     export default {
     name: 'visualizza',
@@ -78,7 +80,8 @@
         contenuto: String,
     },
     components: {
-        VueQrCode
+        VueQrCode,
+        'barcode': VueBarcode
     },
     methods: {
         clickPreferiti() {

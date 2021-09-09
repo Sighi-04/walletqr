@@ -71,7 +71,7 @@
                         "descrizione": document.getElementById('textDescrizione').value,
                         "isBookmarked": false,
                         "tag": null,
-                        "tipo": null,
+                        "tipo": this.tipo,
                         "contenuto": this.contenuto
                     }
                     addToLocalStorage(elemento)

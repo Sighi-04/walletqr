@@ -48,7 +48,7 @@ export default {
     },
     methods: {
         onDecode (result) {
-                this.$router.push({name: 'dettagli', params: {contenuto: result, caller: 'scansione', action: this.action, titolo: this.titolo, descrizione: this.descrizione}});
+                this.$router.push({name: 'dettagli', params: {contenuto: result, caller: 'scansione', action: this.action, titolo: this.titolo, descrizione: this.descrizione, tipo: this.tipo}});
                     //permette lo spostamento quando il codice viene scannerizzati
             }   
      },
@@ -59,6 +59,7 @@ export default {
         descrizione: String, 
         contenuto: String,
         imgpreferiti: String,
+        tipo: String
     }
 }
 </script>
