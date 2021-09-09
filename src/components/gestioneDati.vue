@@ -1,6 +1,6 @@
 <template>
-     <div class="container">
-           <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
+     <div class="text-center">
+        <nav class="navbar navbar-light" style="background-color: #EA5D5D;">
             <div class="container-fluid">
                 <router-link to="/">
                     <img src="assets/icone/back_arrow.svg" alt="indietro" width="34" height="34">
@@ -9,16 +9,25 @@
                     <span class="navbar-brand mb-0 h1">Gestione dati</span>
                 </div>
             </div>
-    </nav>
-        <h2>Salva i dati</h2>
+        </nav>
+        <div class="container">        
+        <div class="container my-5">
+            <h2>Salva i dati</h2>
             <button type="button" class="btn btn-primary" @click="copia">Premi per copiare i dati</button>
+        </div>
         <hr>
-        <h2>Ripristina un backup</h2>
-        <input placeholder="incolla qui un backup" id="textRipristina">
-        <button class="btn btn-success" @click="salva">Carica</button>
+        <div class="container my-5">
+            <h2>Ripristina un backup</h2>
+            <input placeholder="incolla qui un backup" id="textRipristina">
+            <button class="btn btn-primary m-2" @click="salva">Carica</button>
+        </div>
         <hr>
-        <h2>Elimina tutti i dati</h2>
-        <button type="button" class="btn btn-danger" @click="elimina">Elimina tutti i dati</button>
+        <div class="container my-5">
+            <h2>Elimina tutti i dati</h2>
+            <button type="button" class="btn btn-danger" @click="elimina">Elimina tutti i dati</button>
+        </div></div>
+
+
      </div>
 
 </template>
