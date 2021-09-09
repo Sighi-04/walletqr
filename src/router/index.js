@@ -4,7 +4,7 @@ import lista from "../components/lista.vue";
 import scansione from "../components/scansione.vue";
 import visualizza from "../components/visualizza.vue";
 import dettagli from "../components/dettagli.vue";
-
+import gestioneDati from '../components/gestioneDati.vue';
 Vue.use(VueRouter)
 
 const routes = [
@@ -31,6 +31,11 @@ const routes = [
     name:"dettagli",
     component: dettagli,
     props: true
+  },
+  {
+    path:"/backup",
+    name: "gestioneDati",
+    component: gestioneDati,
   }
 ];
 
