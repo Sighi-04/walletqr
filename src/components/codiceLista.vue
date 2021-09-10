@@ -31,7 +31,13 @@ export default {
         isBookmarked: Boolean,
         tag: String,
         tipo: String,
-        contenuto: String
+        contenuto: String,
     }
+    /*,
+    mounted(){
+        document.body.style.color='white'
+        this.$forceUpdate()
+    }
+    */
 }
 </script>
