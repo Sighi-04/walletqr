@@ -115,11 +115,12 @@
       methods: {
         theme(){
           switchTheme()
-        },
-        mounted(){
-          loadTheme()
         }
-  }
+      },
+      mounted(){
+        loadTheme()
+        this.$forceUpdate();
+        }
   }
 
 

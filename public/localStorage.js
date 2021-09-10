@@ -109,8 +109,6 @@ export function controllaDisponibilitaTitolo(titolo) {
 }
 
 //Funzione per lo switch tra light mode e dark mode
-
-
 export function switchTheme(){
     let iconamenu = document.getElementById('bkIcon')
     let iconavuoto = document.getElementById('emptyIcon')
@@ -143,7 +141,9 @@ export function loadTheme(){
     let iconamenu = document.getElementById('bkIcon')
     let iconavuoto = document.getElementById('emptyIcon')
     let menu = document.getElementById('offcanvasExample')
+    let pulsante = document.getElementById('flexSwitchCheckDefault')
     if(localStorage.getItem('theme')=='dark') {
+
         iconamenu.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
         iconavuoto.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
         menu.style.backgroundColor = 'black'
@@ -151,6 +151,7 @@ export function loadTheme(){
         document.body.style.backgroundColor='black'
         document.body.style.color='white'
         document.getElementById('bkLabel').style.color='white'
+        pulsante.setAttribute('checked', true)
     }
     else {
         iconavuoto.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
