@@ -39,7 +39,7 @@
             <div class="container my-5">
               <div class="text-center py-5">
                 <figure class="figure ">
-                  <img src="Assets/icone/empty.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
+                  <img src="Assets/icone/sentiment_neutral_black_24dp.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
                     <figcaption class="figure-caption">Non ci sono codici salvati,<br>
                       premi "+" per aggiungerne uno
                     </figcaption>
@@ -47,15 +47,17 @@
                </div>
               </div>
             </div>
-          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
+          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/icone/tag_black_24dp.svg" :titolo="codice.tistolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
         </div>
-        <div class="position-fixed bottom-0 end-0">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}">Aggiungi Codice QR</router-link></button>
-          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}">Aggiungi Code39</router-link></button>
-        </div>
-      </div>
+          <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}"> Qr  </router-link>
+          <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}"> B </router-link>
+    <div class="position-fixed bottom-0 end-0">
+            <button style="border :none; background-color: white">
+                <img style="min-width: 50px;" src="assets/icone/add_circle.svg">
+            </button> 
+</div>
     </div>
+
   </template>
 
 <script>
@@ -74,7 +76,7 @@
       }
   }
   }
-  
+
 
 
 
