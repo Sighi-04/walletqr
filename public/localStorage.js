@@ -166,11 +166,13 @@ export function controllaDisponibilitaTitolo(titolo) {
 
 export function switchTheme(){
     let iconamenu = document.getElementById('bkIcon')
+    let iconavuoto = document.getElementById('emptyIcon')
     let menu = document.getElementById('offcanvasExample')
     let menucontent = document.getElementById('menulaterale')
     console.log(menucontent)
     if(document.body.style.backgroundColor==''){
         iconamenu.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
+        iconavuoto.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
         localStorage.setItem('theme', 'dark')
         let menu = document.getElementById('offcanvasExample')
         menu.style.backgroundColor = 'black'
@@ -180,6 +182,7 @@ export function switchTheme(){
         document.getElementById('bkLabel').style.color='white'
     }
     else {
+        iconavuoto.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
         iconamenu.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
         localStorage.setItem('theme', 'light')
         document.body.style.backgroundColor=''
