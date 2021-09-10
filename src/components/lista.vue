@@ -65,6 +65,7 @@
               <div></div>
             </div>
           </div>
+<<<<<<< HEAD
         </li>
         <div class="text-center">
           <span class="navbar-brand mb-0 h1">Codici salvati</span>
@@ -141,6 +142,43 @@
     </div>
   </div>
 </template>
+=======
+        </nav>
+        <div class="container">
+          <div v-if="codici==null">
+            <div class="container my-5">
+              <div class="text-center py-5">
+                <figure class="figure ">
+                  <img src="Assets/icone/sentiment_neutral_black_24dp.svg" style="width: 100px;" class="rounded img-fluid " alt="empty">
+                    <figcaption class="figure-caption">Non ci sono codici salvati,<br>
+                      premi "+" per aggiungerne uno
+                    </figcaption>
+                </figure>
+               </div>
+              </div>
+            </div>
+          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/icone/tag_black_24dp.svg" :titolo="codice.tistolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto"></codiceLista></div>
+        </div>
+<<<<<<< HEAD
+          <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}"> Qr  </router-link>
+          <router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}"> B </router-link>
+    <div class="position-fixed bottom-0 end-0">
+            <button style="border :none; background-color: white">
+                <img style="min-width: 50px;" src="assets/icone/add_circle.svg">
+            </button> 
+</div>
+=======
+        <div class="position-fixed bottom-0 end-0">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}">Aggiungi Codice QR</router-link></button>
+          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}">Aggiungi Barcode EAN13</router-link></button>
+        </div>
+      </div>
+>>>>>>> cf616ec4ea225bf21cdb4cdcdfafe3805bc48ac2
+    </div>
+
+  </template>
+>>>>>>> c3db5f167a477cec0f0d9d11fc11f01a89a5db35
 
 <script>
 import codiceLista from "./codiceLista.vue";
@@ -150,6 +188,7 @@ export default {
   components: {
     codiceLista,
   },
+<<<<<<< HEAD
   data() {
     let salvati = readLocalStorage();
     return {
@@ -162,6 +201,19 @@ export default {
     },
   },
 };
+=======
+  data(){
+      let salvati = readLocalStorage();
+      return {
+        codici: salvati
+      }
+  }
+  }
+
+
+
+
+>>>>>>> c3db5f167a477cec0f0d9d11fc11f01a89a5db35
 </script>
 
 <style scoped>
