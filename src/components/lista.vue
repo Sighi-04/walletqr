@@ -77,7 +77,7 @@
             <div class="container my-5">
               <div class="text-center py-5">
                 <figure class="figure ">
-                  <img src="Assets/icone/sentiment_neutral_black_24dp.svg" style="width: 100px;" class="rounded img-fluid " alt="empty" id="emptyIcon">
+                  <img src="assets/icone/sentiment_neutral_black_24dp.svg" style="width: 100px;" class="rounded img-fluid " alt="empty" id="emptyIcon">
                     <figcaption class="figure-caption">Non ci sono codici salvati,<br>
                       premi "+" per aggiungerne uno
                     </figcaption>
@@ -100,7 +100,7 @@
 <script>
    
   import codiceLista from './codiceLista.vue'
-  import { readLocalStorage, switchTheme} from '../../public/localStorage.js'
+  import { loadTheme, readLocalStorage, switchTheme} from '../../public/localStorage.js'
   export default {
   name: 'lista',
   components: {
@@ -115,6 +115,9 @@
       methods: {
         theme(){
           switchTheme()
+        },
+        mounted(){
+          loadTheme()
         }
   }
   }

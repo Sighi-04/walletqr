@@ -78,59 +78,6 @@ export function switchPreferiti(titolo) {
     localStorage.setItem("Codici", JSON.stringify(currentStorage))
 }
 
-//dati di prova
-/*
-let provaa = [
-    {
-        "imglogo": "assets/Icone/tag_black_24dp.svg", 
-        "titolo": "titolo prova 1",
-        "imgtipo": "assets/icone/qrcode.svg",
-        "imgpreferiti": "assets/icone/bookmark_fill.svg",
-        "descrizione": "descrizione codice 1",
-        "isBookmarked": true,
-        "tag": null,
-        "tipo": "QR",
-        "contenuto": "contenuto di prova 1"
-    },
-    {
-        "imglogo":  "assets/Icone/tag_black_24dp.svg", 
-        "titolo": "titolo prova 2",
-        "imgtipo": "assets/icone/qrcode.svg",
-        "imgpreferiti": "assets/icone/bookmark.svg",
-        "descrizione": "descrizione codice 2",
-        "isBookmarked": false,
-        "tag": null,
-        "tipo": "QR",
-        "contenuto": "contenuto di prova 2"
-    },
-    {
-        "imglogo": "assets/Icone/tag_black_24dp.svg", 
-        "titolo": "titolo prova 3",
-        "imgtipo": "assets/icone/barcode.svg",
-        "imgpreferiti": "assets/icone/bookmark_fill.svg",
-        "descrizione": "descrizione codice 3",
-        "isBookmarked": true,
-        "tag": null,
-        "tipo": "QR",
-        "contenuto": "contenuto di prova 3"
-    },
-    {
-        "imglogo": "assets/Icone/tag_black_24dp.svg", 
-        "titolo": "titolo prova 4",
-        "imgtipo": "assets/icone/barcode.svg",
-        "imgpreferiti": "assets/icone/bookmark.svg",
-        "descrizione": "descrizione codice 4",
-        "isBookmarked": false,
-        "tag": null,
-        "tipo": "QR",
-        "contenuto": "contenuto di prova 4"
-    }
-]
-
-localStorage.setItem("Codici", JSON.stringify(provaa))
-*/
-
-
 export function caricaDati(titolo, descrizione){
     let boxtitolo = document.getElementById("textTitolo")
     let boxdescrizione = document.getElementById("textDescrizione")
@@ -168,13 +115,37 @@ export function switchTheme(){
     let iconamenu = document.getElementById('bkIcon')
     let iconavuoto = document.getElementById('emptyIcon')
     let menu = document.getElementById('offcanvasExample')
-    let menucontent = document.getElementById('menulaterale')
-    console.log(menucontent)
     if(document.body.style.backgroundColor==''){
+        localStorage.setItem('theme', 'dark')
         iconamenu.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
         iconavuoto.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
-        localStorage.setItem('theme', 'dark')
-        let menu = document.getElementById('offcanvasExample')
+        menu.style.backgroundColor = 'black'
+        menu.style.color='white'
+        document.body.style.backgroundColor='black'
+        document.body.style.color='white'
+        document.getElementById('bkLabel').style.color='white'
+    }
+    else {
+        localStorage.setItem('theme', 'light')
+        iconavuoto.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
+        iconamenu.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
+        localStorage.setItem('theme', 'light')
+        document.body.style.backgroundColor=''
+        document.body.style.color='black'
+        menu.style.backgroundColor = 'white'
+        menu.style.color='black'
+        document.getElementById('bkLabel').style.color='black'
+
+    }
+}
+
+export function loadTheme(){
+    let iconamenu = document.getElementById('bkIcon')
+    let iconavuoto = document.getElementById('emptyIcon')
+    let menu = document.getElementById('offcanvasExample')
+    if(localStorage.getItem('theme')=='dark') {
+        iconamenu.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
+        iconavuoto.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
         menu.style.backgroundColor = 'black'
         menu.style.color='white'
         document.body.style.backgroundColor='black'
@@ -190,6 +161,5 @@ export function switchTheme(){
         menu.style.backgroundColor = 'white'
         menu.style.color='black'
         document.getElementById('bkLabel').style.color='black'
-
     }
 }
