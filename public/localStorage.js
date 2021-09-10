@@ -160,3 +160,33 @@ export function controllaDisponibilitaTitolo(titolo) {
     }
     return disponibile
 }
+
+//Funzione per lo switch tra light mode e dark mode
+
+
+export function switchTheme(){
+    let iconamenu = document.getElementById('bkIcon')
+    let menu = document.getElementById('offcanvasExample')
+    let menucontent = document.getElementById('menulaterale')
+    console.log(menucontent)
+    if(document.body.style.backgroundColor==''){
+        iconamenu.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
+        localStorage.setItem('theme', 'dark')
+        let menu = document.getElementById('offcanvasExample')
+        menu.style.backgroundColor = 'black'
+        menu.style.color='white'
+        document.body.style.backgroundColor='black'
+        document.body.style.color='white'
+        document.getElementById('bkLabel').style.color='white'
+    }
+    else {
+        iconamenu.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
+        localStorage.setItem('theme', 'light')
+        document.body.style.backgroundColor=''
+        document.body.style.color='black'
+        menu.style.backgroundColor = 'white'
+        menu.style.color='black'
+        document.getElementById('bkLabel').style.color='black'
+
+    }
+}
