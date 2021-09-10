@@ -52,7 +52,7 @@
         <div class="position-fixed bottom-0 end-0">
         <div class="btn-group" role="group" aria-label="Basic example">
           <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'QR', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/qrcode.svg'}}">Aggiungi Codice QR</router-link></button>
-          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}">Aggiungi Code39</router-link></button>
+          <button type="button" class="btn btn-success mx-3 my-3"><router-link :to="{name: 'scansione', params: {caller: 'lista', action: 'aggiungi', tipo: 'bar', imgpreferiti: 'assets/icone/bookmark.svg', imgtipo: 'assets/icone/barcode.svg'}}">Aggiungi Barcode EAN13</router-link></button>
         </div>
       </div>
     </div>
