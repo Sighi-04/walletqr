@@ -142,7 +142,6 @@ export function switchTheme(){
         menu.style.backgroundColor = 'white'
         menu.style.color='black'
         document.getElementById('bkLabel').style.color='black'
-
     }
 }
 

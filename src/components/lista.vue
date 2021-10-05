@@ -48,7 +48,6 @@
                     class="form-check-input"
                     type="checkbox"
                     id="flexSwitchCheckDefault"
-                    disabled
                   />
                   <label class="form-check-label" for="flexSwitchCheckDefault"
                     >Dark mode (sperimentale)</label
@@ -86,7 +85,7 @@
                </div>
               </div>
             </div>
-          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto" :theme="tema"></codiceLista></div>
+          <div v-else><codiceLista v-for="(codice, index) in codici" :key="index" imglogo="assets/icone/tag_black_24dp.svg" :titolo="codice.titolo" :imgtipo="codice.imgtipo" :imgpreferiti="codice.imgpreferiti" :descrizione="codice.descrizione" :isBookmarked="codice.isBookmarked" :tipo="codice.tipo" :contenuto="codice.contenuto" theme="dark"></codiceLista></div>
         </div>
         <div class="position-fixed bottom-0 end-0">
         <div class="btn-group" role="group" aria-label="Basic example">
@@ -116,14 +115,12 @@
       methods: {
         theme(){
           switchTheme()
+          window.location.reload(false);
         }
       },
       mounted(){
         loadTheme()
         this.$forceUpdate();
-        },
-        props: {
-          tema: String
         }
   }
 </script>
