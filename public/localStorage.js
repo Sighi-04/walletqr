@@ -110,39 +110,13 @@ export function controllaDisponibilitaTitolo(titolo) {
 
 //Funzione per lo switch tra light mode e dark mode
 export function switchTheme(){
-    let iconamenu = document.getElementById('bkIcon')
-    let vuoto = true
-    let iconavuoto = null
-    if(readLocalStorage!=null) {
-        vuoto = false
-        iconavuoto = document.getElementById('emptyIcon')
-    }
-    let menu = document.getElementById('offcanvasExample')
-    if(document.body.style.backgroundColor==''){
-        localStorage.setItem('theme', 'dark')
-        iconamenu.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
-        if(vuoto){
-        iconavuoto.style.filter='invert(100%) sepia(0%) saturate(15%) hue-rotate(280deg) brightness(104%) contrast(104%)'
-        }
-        menu.style.backgroundColor = 'black'
-        menu.style.color='white'
-        document.body.style.backgroundColor='black'
-        document.body.style.color='white'
-        document.getElementById('bkLabel').style.color='white'
+    if(localStorage.getItem('theme')=='dark'){
+        localStorage.setItem('theme','light')
     }
     else {
-        localStorage.setItem('theme', 'light')
-        if(vuoto){
-        iconavuoto.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
-        }
-        iconamenu.style.filter = 'invert(0%) sepia(99%) saturate(0%) hue-rotate(352deg) brightness(96%) contrast(100%)'
-        localStorage.setItem('theme', 'light')
-        document.body.style.backgroundColor=''
-        document.body.style.color='black'
-        menu.style.backgroundColor = 'white'
-        menu.style.color='black'
-        document.getElementById('bkLabel').style.color='black'
+        localStorage.setItem('theme', 'dark')
     }
+    loadTheme()
 }
 
 export function loadTheme(){

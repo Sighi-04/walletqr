@@ -42,8 +42,7 @@ export default {
     data(){
         let salvati = readLocalStorage();
         return {
-        codici: salvati,
-        
+        codici: salvati
         }
     },
     methods: {
